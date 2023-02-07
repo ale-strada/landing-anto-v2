@@ -6,6 +6,7 @@ import AnimacionLogo from "./layers.svg"
 import RedesLogo from "./logo-wechat.svg"
 import Closed from "./arrowClosed.svg"
 import Open from "./arrowOpen.svg"
+import WhiteCheck from "./check-blanco.svg"
 
 export function LogoReducidoAnto(){
     return <LogoReducido/>
@@ -33,4 +34,7 @@ export function ClosedArrow(){
 }
 export function OpenArrow(){
     return <Open/>
+}
+export function Check(){
+    return <WhiteCheck/>
 }

@@ -12,6 +12,12 @@ justify-content: space-around;
 align-items: center;
 border-top: 1px solid #C9C8C8;
 margin-top: 30px;
-padding: 30px 30px 0 30px;
+padding: 20px 0px 0 0px;
 justify-content: space-between;
+`
+
+export const ScrollBarDiv = styled.div`
+    border-left: 8px solid #BCBCEE;
+    padding: 0px 20px;
+    margin-left: 10px;
 `

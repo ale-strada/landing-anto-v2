@@ -24,7 +24,7 @@ return (
         <Collapse in={open}>
         <div id="collapse-text">
         <CardDetailsText>
-          {props.contenido}   
+            {props.contenido}   
         </CardDetailsText>
         </div>
         </Collapse>

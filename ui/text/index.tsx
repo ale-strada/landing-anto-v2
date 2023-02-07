@@ -55,10 +55,20 @@ export const CardDetailsText = styled.p`
 font-family: 'Roboto';
 font-style: normal;
 font-weight: 500;
-font-size: 14px;
+font-size: 16px;
 line-height: 194.52%;
 display: flex;
 align-items: center;
 color: #878282;
 margin: 10px 30px;
+`
+
+export const TextInter700 = styled.h2`
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 36px;
+line-height: 44px;
+color: #FFFFFF;
+
 `
