@@ -18,11 +18,24 @@ border-radius:0 0 0 10px;
 position: absolute;
 top: 0px;
 right: 0px;
-display: flex;
+display: none;
 justify-content: space-around;
 flex-direction: column;
 align-items: center;
 background: #9692D7;
+
+@media (min-width: 550px) {
+    display:flex;
+    height: 140px;
+    background: none;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 60%;
+}
+
+@media (min-width: 850px) {
+    width: 40%
+}
 
 `
 
@@ -33,4 +46,17 @@ justify-content: space-around;
 align-items: flex-start;
 height: 60%;
 margin-top: 60px;
+
+@media (min-width: 550px) {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 90%;
+}
+`
+
+export const BurgerWrap = styled.div`
+z-index:5;
+@media (min-width: 550px) {
+    display:none
+}
 `

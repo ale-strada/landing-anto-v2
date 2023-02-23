@@ -1,10 +1,15 @@
-import { FotoAboutGris, FotoAboutLila } from "@/ui/img";
+import { AboutPicture, FotoAboutGris, FotoAboutLila } from "@/ui/img";
 import { TextRoboto500, TitleWithShadow, TitleWithShadowBold } from "@/ui/text";
-import { AboutTextConteiner } from "./styled";
+import { AboutSection, AboutTextConteiner, FotoWrapDesktop, FotoWrapMovile } from "./styled";
 
 export function About(){
-    return <section id="about" style={{backgroundColor:"#B1F4CF",position: "relative", bottom: "140px"}}>
-        <FotoAboutLila />
+    return <AboutSection id="about" style={{backgroundColor:"#B1F4CF",position: "relative", bottom: "140px"}}>
+        <FotoWrapMovile>
+            <FotoAboutLila />
+        </FotoWrapMovile>
+        <FotoWrapDesktop>
+            <AboutPicture/>
+        </FotoWrapDesktop>
         <AboutTextConteiner>
             <TitleWithShadow>El Diseño Digital</TitleWithShadow>
             <TitleWithShadowBold>is the new BLACK.</TitleWithShadowBold>
@@ -15,6 +20,9 @@ export function About(){
                 ¡Es el momento de potenciar tu marca!
             </TextRoboto500>
         </AboutTextConteiner>
-        <FotoAboutGris/>
-    </section>
+        <FotoWrapMovile>
+            <FotoAboutGris/>
+        </FotoWrapMovile>
+        
+    </AboutSection>
 }

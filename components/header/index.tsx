@@ -2,7 +2,7 @@ import { LogoReducidoAnto } from "@/ui/img";
 import { TextRoboto500 } from "@/ui/text";
 import { Turn as Hamburger } from 'hamburger-react'
 import { useState } from "react";
-import { HeaderConteiner, NavMenu, UlNav } from "./styled";
+import { BurgerWrap, HeaderConteiner, NavMenu, UlNav } from "./styled";
 
 export function Header(){
 
@@ -25,22 +25,17 @@ export function Header(){
         if (element) {element.scrollIntoView({ behavior: 'smooth' }); }
     };
 
-    const style={
-    }
-    const styleNone ={
-        display:"none"
-    }
     return<HeaderConteiner>
         <LogoReducidoAnto/>
-        <div style={{zIndex:"10"}}>
+        <BurgerWrap>
             <Hamburger color="#FFFFFF" toggled={isOpen} toggle={setOpen} />
-        </div>
-        <NavMenu style={isOpen? style:styleNone}>
+        </BurgerWrap>
+        <NavMenu style={isOpen?{display:"flex"}:{}}>
             <UlNav>
-                <TextRoboto500 onClick={handleClickScrollAbout}>Home</TextRoboto500>
-                <TextRoboto500 onClick={handleClickScrollServicios}>Servicios</TextRoboto500>
-                <TextRoboto500 onClick={handleClickScrollFaqs}>FAQS</TextRoboto500>
-                <TextRoboto500 onClick={handleClickScrollContacto}>Contacto</TextRoboto500>
+                <TextRoboto500 style={{cursor:"pointer"}} onClick={handleClickScrollAbout}>Home</TextRoboto500>
+                <TextRoboto500 style={{cursor:"pointer"}} onClick={handleClickScrollServicios}>Servicios</TextRoboto500>
+                <TextRoboto500 style={{cursor:"pointer"}} onClick={handleClickScrollFaqs}>FAQS</TextRoboto500>
+                <TextRoboto500 style={{cursor:"pointer"}} onClick={handleClickScrollContacto}>Contacto</TextRoboto500>
             </UlNav>
         </NavMenu>
 

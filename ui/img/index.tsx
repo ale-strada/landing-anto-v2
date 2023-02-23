@@ -14,6 +14,7 @@ import LogoLinkedIn from "./Linkedin.svg"
 import LogoWhatsApp from "./whatsApp.svg"
 import LogoBehance from "./Behance (2).svg"
 import Linea from "./Line 3.svg"
+import AboutPic from "./fotito-ofi03 1.svg"
 
 export function LogoReducidoAnto(){
     return <LogoReducido/>
@@ -66,4 +67,8 @@ export function Behance(props:any){
 }
 export function Line(){
     return <Linea/>
+}
+
+export function AboutPicture(){
+    return <AboutPic/>
 }
