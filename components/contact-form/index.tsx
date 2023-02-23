@@ -70,7 +70,7 @@ export default function ContactForm() {
     `
 return (
     
-    <Form onSubmit={handleSubmit}>
+    <Form id='contacto' onSubmit={handleSubmit}>
         <Label><TextInter600Lila style={{marginBottom: "5px"}}>Tu nombre</TextInter600Lila>
             <Input type="text" name="nombre"/>
         </Label>

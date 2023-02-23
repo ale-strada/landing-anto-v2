@@ -3,7 +3,7 @@ import { TextRoboto500, TitleWithShadow, TitleWithShadowBold } from "@/ui/text";
 import { AboutTextConteiner } from "./styled";
 
 export function About(){
-    return <div style={{backgroundColor:"#B1F4CF",position: "relative", bottom: "140px"}}>
+    return <section id="about" style={{backgroundColor:"#B1F4CF",position: "relative", bottom: "140px"}}>
         <FotoAboutLila />
         <AboutTextConteiner>
             <TitleWithShadow>El Diseño Digital</TitleWithShadow>
@@ -16,5 +16,5 @@ export function About(){
             </TextRoboto500>
         </AboutTextConteiner>
         <FotoAboutGris/>
-    </div>
+    </section>
 }

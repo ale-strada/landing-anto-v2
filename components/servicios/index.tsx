@@ -4,7 +4,7 @@ import { CollapseCard } from "../collapse";
 import { ScrollBarDiv, ServiciosConteiner } from "./styled";
 
 export function Servicios(){
-    return <div>
+    return <div id="servicios">
         <ServiciosConteiner>
             <CarouselServicios/>
             <TextRoboto400>Diseño y creación de contenidos multimediales para tu marca, negocio o emprendimiento.</TextRoboto400>
