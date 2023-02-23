@@ -7,6 +7,13 @@ import RedesLogo from "./logo-wechat.svg"
 import Closed from "./arrowClosed.svg"
 import Open from "./arrowOpen.svg"
 import WhiteCheck from "./check-blanco.svg"
+import Telefono from "./Icono-telefono.svg"
+import Sobre from "./icono-sobre.svg"
+import Direccion from "./icono-direccion.svg"
+import LogoLinkedIn from "./Linkedin.svg"
+import LogoWhatsApp from "./whatsApp.svg"
+import LogoBehance from "./Behance.svg"
+import Linea from "./Line 3.svg"
 
 export function LogoReducidoAnto(){
     return <LogoReducido/>
@@ -37,4 +44,26 @@ export function OpenArrow(){
 }
 export function Check(){
     return <WhiteCheck/>
+}
+export function Phone(props:any){
+    return <Telefono style={props.style}/>
+}
+export function Mail(props:any){
+    return <Sobre style={props.style}/>
+}
+export function Address(props:any){
+    return <Direccion style={props.style}/>
+}
+
+export function LinkedIn(props:any){
+    return <LogoLinkedIn onClick={props.onClick}/>
+}
+export function WhatsApp(props:any){
+    return <LogoWhatsApp onClick={props.onClick}/>
+}
+export function Behance(props:any){
+    return <LogoBehance onClick={props.onClick}/>
+}
+export function Line(){
+    return <Linea/>
 }
