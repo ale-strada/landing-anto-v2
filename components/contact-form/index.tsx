@@ -66,7 +66,7 @@ export default function ContactForm() {
     margin: 80px auto;
     `
     const Label = styled.label`
-    margin: 30px 0;
+    margin: 10px 0;
     `
 return (
     
@@ -85,7 +85,7 @@ return (
             display: "flex",
             justifyContent: "flex-end"
             }}>
-            <ContactFormButton type="submit" text="enviar"/> 
+            <ContactFormButton type="submit" text="Enviar mensaje"/> 
         </div>
         
     </Form>

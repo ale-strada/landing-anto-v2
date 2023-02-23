@@ -7,6 +7,7 @@ import { Objetivo } from '@/components/objetivo'
 import { Faqs } from '@/components/faqs'
 import { Cartel } from '@/components/cartel'
 import ContactForm from '@/components/contact-form'
+import { Footer } from '@/components/footer'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -28,6 +29,7 @@ export default function Home() {
       <Faqs/>
       <Cartel/>
       <ContactForm/>
+      <Footer/>
     </div>
     </>
   )
