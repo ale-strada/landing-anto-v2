@@ -36,6 +36,15 @@ color: #FFFFFF;
 margin: 10px;
 `
 export function Footer(){
+function handleClickLinkedin(){
+    
+}
+function handleClickWhatsApp(){
+
+}
+    function handleClickBehance(){
+
+    }
     return <FooterContainer>
         <div>
             <InfoContainer><Phone style={{marginRight:"10px"}}/><TextRoboto500 style={{fontSize:"16px", marginBottom:"0"}}>+549 3512 401811</TextRoboto500></InfoContainer>
@@ -45,9 +54,9 @@ export function Footer(){
         <RedesContainer>
             <div><Line/></div>
             <LogosContainer>
-                    <LinkedIn/>
-                    <WhatsApp/>
-                    <Behance/>
+                    <a href="https://www.linkedin.com/in/antonella-jaime-baa707201/"><LinkedIn /></a>
+                    <a href="https://wa.me/+5493512401811?text=Hola%20Antonella,%20me%20gustaría"><WhatsApp /></a>
+                    <a href="https://www.behance.net/antonellajaime"><Behance/></a>
             </LogosContainer>
             <div><Line/></div>
         </RedesContainer>
