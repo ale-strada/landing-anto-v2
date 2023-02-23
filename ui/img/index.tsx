@@ -12,7 +12,7 @@ import Sobre from "./icono-sobre.svg"
 import Direccion from "./icono-direccion.svg"
 import LogoLinkedIn from "./Linkedin.svg"
 import LogoWhatsApp from "./whatsApp.svg"
-import LogoBehance from "./Behance.svg"
+import LogoBehance from "./Behance (2).svg"
 import Linea from "./Line 3.svg"
 
 export function LogoReducidoAnto(){

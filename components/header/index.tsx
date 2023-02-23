@@ -32,12 +32,14 @@ export function Header(){
     }
     return<HeaderConteiner>
         <LogoReducidoAnto/>
-        <Hamburger color="#FFFFFF" toggled={isOpen} toggle={setOpen} />
+        <div style={{zIndex:"10"}}>
+            <Hamburger color="#FFFFFF" toggled={isOpen} toggle={setOpen} />
+        </div>
         <NavMenu style={isOpen? style:styleNone}>
             <UlNav>
-                <TextRoboto500 onClick={handleClickScrollAbout}>home</TextRoboto500>
+                <TextRoboto500 onClick={handleClickScrollAbout}>Home</TextRoboto500>
                 <TextRoboto500 onClick={handleClickScrollServicios}>Servicios</TextRoboto500>
-                <TextRoboto500 onClick={handleClickScrollFaqs}>Faqs</TextRoboto500>
+                <TextRoboto500 onClick={handleClickScrollFaqs}>FAQS</TextRoboto500>
                 <TextRoboto500 onClick={handleClickScrollContacto}>Contacto</TextRoboto500>
             </UlNav>
         </NavMenu>

@@ -13,16 +13,16 @@ position:sticky;
 `
 export const NavMenu = styled.div`
 width:70%;
-height:250px;
-border-radius: 10px; 
+height: 500px;
+border-radius:0 0 0 10px; 
 position: absolute;
-top: 140px;
+top: 0px;
 right: 0px;
 display: flex;
 justify-content: space-around;
 flex-direction: column;
 align-items: center;
-background: #BCBCEE;
+background: #9692D7;
 
 `
 
@@ -31,5 +31,6 @@ display: flex;
 flex-direction: column;
 justify-content: space-around;
 align-items: flex-start;
-height: 90%;
+height: 60%;
+margin-top: 60px;
 `
