@@ -72,3 +72,14 @@ line-height: 44px;
 color: #FFFFFF;
 
 `
+
+export const TextInter600Lila = styled.p`
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 17px;
+display: flex;
+align-items: center;
+color: #9890E3;
+`
