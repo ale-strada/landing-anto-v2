@@ -19,6 +19,8 @@ position: relative;
 bottom: 140px;
 
 @media (min-width: 550px) {
+position:relative;
+bottom:0px !important;
 }
 
 @media (min-width: 850px) {
