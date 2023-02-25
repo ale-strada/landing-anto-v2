@@ -15,6 +15,7 @@ import LogoWhatsApp from "./whatsApp.svg"
 import LogoBehance from "./Behance (2).svg"
 import Linea from "./Line 3.svg"
 import AboutPic from "./fotito-ofi03 1.svg"
+import Chuno from "./chuno.svg"
 
 export function LogoReducidoAnto(){
     return <LogoReducido/>
@@ -71,4 +72,8 @@ export function Line(){
 
 export function AboutPicture(){
     return <AboutPic/>
+}
+
+export function ChunoDesk(){
+    return <Chuno/>
 }

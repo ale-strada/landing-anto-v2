@@ -18,9 +18,10 @@ background-color:#B1F4CF;
 position: relative; 
 bottom: 140px;
 
-@media (min-width: 550px) {
+@media (min-width: 420px) {
 position:relative;
 bottom:0px !important;
+background-color:#BCBCED;
 }
 
 @media (min-width: 850px) {

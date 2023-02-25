@@ -3,7 +3,7 @@ import { TextRoboto500, TitleWithShadow, TitleWithShadowBold } from "@/ui/text";
 import { AboutSection, AboutTextConteiner, FotoWrapDesktop, FotoWrapMovile } from "./styled";
 
 export function About(){
-    return <AboutSection id="about" style={{backgroundColor:"#B1F4CF",position: "relative", bottom: "140px"}}>
+    return <AboutSection id="about">
         <FotoWrapMovile>
             <FotoAboutLila />
         </FotoWrapMovile>

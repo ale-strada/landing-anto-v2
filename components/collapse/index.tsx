@@ -10,8 +10,9 @@ const [open, setOpen] = useState(false);
 
 return (
     <>
-        <DetalleCardConteiner>
-            <TextRoboto700Negro>{props.buttonText}</TextRoboto700Negro>
+    <div style={props.style}>
+        <DetalleCardConteiner >
+        <TextRoboto700Negro>{props.buttonText}</TextRoboto700Negro>
         <Button
         style={{background:"none", border:"none"}}
         onClick={() => setOpen(!open)}
@@ -20,6 +21,7 @@ return (
         >
         {open? <OpenArrow/>:<ClosedArrow/>}
         </Button> 
+        
         </DetalleCardConteiner>
         <Collapse in={open}>
         <div id="collapse-text">
@@ -28,6 +30,8 @@ return (
         </CardDetailsText>
         </div>
         </Collapse>
+    </div>
+
     </>
 );
 }

@@ -9,6 +9,9 @@ const ServicioCardConteiner = styled.div `
     flex-direction: column;
     align-items: center;
     margin: 30px auto;
+    @media (min-width: 420px) {
+    height:200px;
+    }
 `
 
 export function DisenoCard(){
