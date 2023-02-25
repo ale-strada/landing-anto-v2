@@ -9,7 +9,7 @@ line-height: 28px;
 text-align: justify;
 color: #FFFFFF;
 @media (min-width: 420px) {
-font-size:32px;
+//font-size:32px;
 }
 `
 

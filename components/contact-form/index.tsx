@@ -97,7 +97,6 @@ return (
         <ButtonResponsiveWrap>
             <ContactFormButton type="submit" text="Enviar mensaje"/> 
         </ButtonResponsiveWrap>
-        
     </Form>
 );
 }

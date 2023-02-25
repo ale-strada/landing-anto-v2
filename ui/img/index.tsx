@@ -13,7 +13,6 @@ import Direccion from "./icono-direccion.svg"
 import LogoLinkedIn from "./Linkedin.svg"
 import LogoWhatsApp from "./whatsApp.svg"
 import LogoBehance from "./Behance (2).svg"
-import Linea from "./Line 3.svg"
 import AboutPic from "./fotito-ofi03 1.svg"
 import Chuno from "./chuno.svg"
 
@@ -65,9 +64,6 @@ export function WhatsApp(props:any){
 }
 export function Behance(props:any){
     return <LogoBehance onClick={props.onClick}/>
-}
-export function Line(){
-    return <Linea/>
 }
 
 export function AboutPicture(){

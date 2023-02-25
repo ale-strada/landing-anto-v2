@@ -1,4 +1,4 @@
-import { Address, Behance, Line, LinkedIn, Mail, Phone, WhatsApp } from "@/ui/img"
+import { Address, Behance, LinkedIn, Mail, Phone, WhatsApp } from "@/ui/img"
 import { TextRoboto500 } from "@/ui/text"
 import styled from "styled-components"
 
@@ -23,6 +23,7 @@ margin:20px 0;
 const LogosContainer= styled.div`
 display: flex;
 width: 40%;
+max-width:200px;
 align-items: center;
 justify-content: space-around;
 `
@@ -35,16 +36,16 @@ line-height: 13px;
 color: #FFFFFF;
 margin: 10px;
 `
-export function Footer(){
-function handleClickLinkedin(){
-    
-}
-function handleClickWhatsApp(){
-
-}
-    function handleClickBehance(){
-
+const LineContainer= styled.div`
+border: solid 2px #FFFF;
+width:85px;
+@media (min-width: 420px) {
+    width:295px;
     }
+`
+
+export function Footer(){
+
     return <FooterContainer>
         <div>
             <InfoContainer><Phone style={{marginRight:"10px"}}/><TextRoboto500 style={{fontSize:"16px", marginBottom:"0"}}>+549 3512 401811</TextRoboto500></InfoContainer>
@@ -52,13 +53,13 @@ function handleClickWhatsApp(){
             <InfoContainer><Address style={{marginRight:"10px"}}/><TextRoboto500 style={{fontSize:"16px", marginBottom:"0"}}>De Córdoba - Argentina para el mundo.</TextRoboto500></InfoContainer>
         </div>
         <RedesContainer>
-            <div><Line/></div>
+            <LineContainer/>
             <LogosContainer>
                     <a href="https://www.linkedin.com/in/antonella-jaime-baa707201/"><LinkedIn /></a>
                     <a href="https://wa.me/+5493512401811?text=Hola%20Antonella,%20me%20gustaría"><WhatsApp /></a>
                     <a href="https://www.behance.net/antonellajaime"><Behance/></a>
             </LogosContainer>
-            <div><Line/></div>
+            <LineContainer/>
         </RedesContainer>
         <Derechos>Copyright©2022 | Todos los derechos reservados</Derechos>
     </FooterContainer>
