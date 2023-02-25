@@ -8,6 +8,9 @@ font-size: 24px;
 line-height: 28px;
 text-align: justify;
 color: #FFFFFF;
+@media (min-width: 420px) {
+font-size:32px;
+}
 `
 
 export const TitleWithShadow = styled.h2`
@@ -44,6 +47,9 @@ color: #FFFFFF;
 `
 export const TextRoboto700Lila = styled(TextRoboto700)`
 color: #BCBCEE;
+@media (min-width: 420px) {
+font-size:48px;
+}
 `
 export const TextRoboto700Negro = styled(TextRoboto700)`
 font-size: 24px;
