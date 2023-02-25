@@ -21,6 +21,10 @@ font-size: 32px;
 line-height: 38px;
 color: #FFFFFF;
 text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+@media (min-width: 850px) {
+    font-size:50px;
+    margin: 20px 0;
+}
 `
 
 export const TitleWithShadowBold = styled(TitleWithShadow)`
@@ -34,6 +38,9 @@ font-weight: 700;
 font-size: 36px;
 line-height: 42px;
 color: #FFFFFF;
+    @media (min-width: 850px) {
+    font-size:48px;
+    }
 `
 
 export const TextRoboto400 = styled.p`
@@ -44,6 +51,10 @@ font-size: 20px;
 line-height: 23px;
 text-align: center;
 color: #FFFFFF;
+@media (min-width: 850px) {
+font-size:32px;
+line-height: 40px;
+}
 `
 export const TextRoboto700Lila = styled(TextRoboto700)`
 color: #BCBCEE;

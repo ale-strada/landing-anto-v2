@@ -6,9 +6,16 @@ height: 380px;
 background: linear-gradient(180deg, #ACE1C8 0%, #BCBCED 98.44%);
 position: relative;
 bottom: 140px;
+max-width:1190px;
+margin:0 auto;
 @media (min-width: 420px) {
 bottom:0px;
 }
+@media (min-width: 850px) {
+padding:50px;
+height:484px;
+}
+
 
 `
 export const DetalleCardConteiner = styled.div`

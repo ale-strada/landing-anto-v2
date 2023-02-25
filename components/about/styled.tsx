@@ -10,6 +10,8 @@ export const AboutTextConteiner = styled.div`
 }
 
 @media (min-width: 850px) {
+    left: 940px;
+    bottom: 505px;
 }
 `
 
@@ -33,9 +35,21 @@ export const FotoWrapMovile = styled.div`
 }
 `
 
-export const FotoWrapDesktop = styled.div`
+export const FotoWrapTablet = styled.div`
     display:none;
 @media (min-width: 550px) {
     display:initial
+}
+@media (min-width: 850px) {
+    display:none;
+}
+`
+export const FotoWrapDesktop = styled.div`
+    display:none;
+@media (min-width: 550px) {
+    display:none;
+}
+@media (min-width: 850px) {
+    display:initial;
 }
 `

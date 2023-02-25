@@ -1,14 +1,17 @@
-import { AboutPicture, FotoAboutGris, FotoAboutLila } from "@/ui/img";
+import { AboutDesktop, AboutPicture, FotoAboutGris, FotoAboutLila } from "@/ui/img";
 import { TextRoboto500, TitleWithShadow, TitleWithShadowBold } from "@/ui/text";
-import { AboutSection, AboutTextConteiner, FotoWrapDesktop, FotoWrapMovile } from "./styled";
+import { AboutSection, AboutTextConteiner, FotoWrapDesktop, FotoWrapMovile, FotoWrapTablet } from "./styled";
 
 export function About(){
     return <AboutSection id="about">
         <FotoWrapMovile>
             <FotoAboutLila />
         </FotoWrapMovile>
-        <FotoWrapDesktop>
+        <FotoWrapTablet>
             <AboutPicture/>
+        </FotoWrapTablet>
+        <FotoWrapDesktop>
+            <AboutDesktop/>
         </FotoWrapDesktop>
         <AboutTextConteiner>
             <TitleWithShadow>El Diseño Digital</TitleWithShadow>
