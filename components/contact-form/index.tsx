@@ -50,6 +50,9 @@ export default function ContactForm() {
     background: rgba(152, 144, 227, 0.09);
     border: 1px solid #9890E3;
     border-radius: 14px;
+    @media (min-width: 420px) {
+    width:598px;
+    }
     `
     const TextArea = styled.textarea`
     padding:10px;
@@ -58,6 +61,9 @@ export default function ContactForm() {
     border: 1px solid #9890E3;
     border-radius: 14px;
     height: 170px;
+    @media (min-width: 420px) {
+    width:598px;
+    }
     `
     const Form = styled.form`
     display: flex;
@@ -67,6 +73,14 @@ export default function ContactForm() {
     `
     const Label = styled.label`
     margin: 10px 0;
+    `
+    const ButtonResponsiveWrap = styled.div`
+    width:382px;
+    display: flex;
+    justify-content: flex-end;
+    @media (min-width: 420px) {
+    width:598px;
+    }
     `
 return (
     
@@ -80,13 +94,9 @@ return (
         <Label><TextInter600Lila style={{marginBottom: "5px"}}>Escribe tu mensaje</TextInter600Lila>
             <TextArea name="mensaje" />
         </Label>
-        <div style={{
-            width:"382px",
-            display: "flex",
-            justifyContent: "flex-end"
-            }}>
+        <ButtonResponsiveWrap>
             <ContactFormButton type="submit" text="Enviar mensaje"/> 
-        </div>
+        </ButtonResponsiveWrap>
         
     </Form>
 );
