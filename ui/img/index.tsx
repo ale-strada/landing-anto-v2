@@ -19,6 +19,11 @@ import ChunoFoto from "./foto-grande.svg"
 import OpenBig from "./arrowopenbig.svg"
 import ClosedBig from "./arrowclosedbig.svg"
 import styled from "styled-components"
+import Alejandro from "./alejandro.svg"
+import Alejandro2 from "./alejandro 2.svg"
+import Carcajada from "./carcajada.svg"
+import Beltran from "./Beltran.svg"
+import Vir from "./vir.svg"
 
 export function LogoReducidoAnto(){
     return <LogoReducido/>
@@ -112,4 +117,20 @@ export function AboutDesktop(){
 
 export function ChunoDeskBig(){
     return <ChunoDeskBig/>
+}
+
+export function AlejandroMessage(){
+    return <Alejandro/>
+}
+export function AlejandroMessageTwo(){
+    return <Alejandro2/>
+}
+export function CarcajadaMessage(){
+    return <Carcajada/>
+}
+export function BeltranMessage(){
+    return <Beltran/>
+}
+export function VirMessage(){
+    return <Vir/>
 }

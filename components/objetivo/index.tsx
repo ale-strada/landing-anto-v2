@@ -1,11 +1,35 @@
-import { Check } from "@/ui/img";
+import { AlejandroMessage, AlejandroMessageTwo, BeltranMessage, CarcajadaMessage, Check, VirMessage } from "@/ui/img";
 import { TextInter700, TextRoboto500 } from "@/ui/text";
-import { DetailsConteiner, ObjetivoConteiner, ObjetivosDetailsConteiner } from "./styled";
+import { DetailsConteiner, ObjetivoConteiner, ObjetivosDetailsConteiner, Testimonios } from "./styled";
+
 
 
 export function Objetivo(){
-    return <ObjetivoConteiner>
-                <TextInter700 style={{ margin:"0 60px", paddingTop:"80px"}}>Mi objetivo con cada cliente:</TextInter700>
+    return <div>
+    
+    <ObjetivoConteiner>
+        <Testimonios>
+            <div style={{position:"relative", top:"-20px"}}>
+                <AlejandroMessage/>
+            </div>
+            <div style={{margin: "20px 0 0 0"}}>
+                <CarcajadaMessage/>
+            </div>
+            <div style={{margin:" 80px 0 0 0"}}>
+                <AlejandroMessageTwo/>
+            </div>
+            <div style={{    
+                position: "relative",
+                bottom: "150px",
+                left: "400px"}}>
+                <BeltranMessage/>
+            </div>
+            <div>
+                <VirMessage/>
+            </div>
+        </Testimonios>
+        <div style={{width:"50%"}}>
+            <TextInter700 style={{ margin:"0 60px", paddingTop:"80px"}}>Mi objetivo con cada cliente:</TextInter700>
                 <ObjetivosDetailsConteiner>
                     <DetailsConteiner>
                         <div style={{marginRight: "15px"}}>
@@ -26,5 +50,8 @@ export function Objetivo(){
                         <TextRoboto500 style={{textAlign: "left"}}>Brindar planes flexibles y a la medida de lo que sus marcas necesitan.</TextRoboto500>
                     </DetailsConteiner>
                 </ObjetivosDetailsConteiner>
-        </ObjetivoConteiner>
+        </div>
+        </ObjetivoConteiner>        
+    </div>
+
 }
