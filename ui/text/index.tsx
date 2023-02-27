@@ -67,6 +67,9 @@ font-size: 24px;
 line-height: 28px;
 color: #000000;
 margin: 10px;
+@media (min-width: 850px) {
+font-size:48px;
+}
 `
 export const CardDetailsText = styled.p`
 font-family: 'Roboto';
@@ -78,6 +81,9 @@ display: flex;
 align-items: center;
 color: #878282;
 margin: 10px 30px;
+@media (min-width: 850px) {
+font-size:28px;
+}
 `
 
 export const TextInter700 = styled.h2`

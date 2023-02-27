@@ -16,6 +16,9 @@ import LogoBehance from "./Behance (2).svg"
 import AboutPic from "./fotito-ofi03 1.svg"
 import Chuno from "./chuno.svg"
 import ChunoFoto from "./foto-grande.svg"
+import OpenBig from "./arrowopenbig.svg"
+import ClosedBig from "./arrowclosedbig.svg"
+import styled from "styled-components"
 
 export function LogoReducidoAnto(){
     return <LogoReducido/>
@@ -38,11 +41,39 @@ export function Animacion(){
 export function Redes(){
     return <RedesLogo style={{marginBottom:"10px"}} />
 }
+const ArrowresponsiveWrap = styled.div`
+display: none;
+@media (min-width: 850px) {
+display:inherit;
+}
+`
+const ArrowresponsiveWrapMobile = styled.div`
+@media (min-width: 850px) {
+display:none;
+}
+`
+
 export function ClosedArrow(){
-    return <Closed />
+    return <div>
+            <ArrowresponsiveWrapMobile>
+                <Closed />
+            </ArrowresponsiveWrapMobile>
+            <ArrowresponsiveWrap>
+                <ClosedBig/>
+            </ArrowresponsiveWrap>
+    </div>
+   
 }
 export function OpenArrow(){
-    return <Open/>
+    return <div>
+        <ArrowresponsiveWrapMobile>
+            <Open/>
+        </ArrowresponsiveWrapMobile>
+        <ArrowresponsiveWrap>
+            <OpenBig/>
+        </ArrowresponsiveWrap>
+    </div>
+    
 }
 export function Check(){
     return <WhiteCheck/>
@@ -77,4 +108,8 @@ export function ChunoDesk(){
 
 export function AboutDesktop(){
     return <ChunoFoto/>
+}
+
+export function ChunoDeskBig(){
+    return <ChunoDeskBig/>
 }
