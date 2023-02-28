@@ -13,6 +13,9 @@ justify-content: flex-start;
 align-items: center;
 width: 315px;
 margin: 5px 20px;
+@media (min-width: 850px) {
+margin-left:100px;
+}
 `
 const RedesContainer = styled.div`
 display: flex;
@@ -42,6 +45,9 @@ width:85px;
 @media (min-width: 420px) {
     width:295px;
     }
+@media (min-width: 850px) {
+width:598px;
+}
 `
 
 export function Footer(){
