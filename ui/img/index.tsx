@@ -24,6 +24,7 @@ import Alejandro2 from "./alejandro 2.svg"
 import Carcajada from "./carcajada.svg"
 import Beltran from "./Beltran.svg"
 import Vir from "./vir.svg"
+import Faqs from "./Frame.svg"
 
 export function LogoReducidoAnto(){
     return <LogoReducido/>
@@ -133,4 +134,7 @@ export function BeltranMessage(){
 }
 export function VirMessage(){
     return <Vir/>
+}
+export function FaqsDeco(){
+    return <Faqs/>
 }
