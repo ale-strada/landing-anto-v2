@@ -26,6 +26,10 @@ border-top: 1px solid #C9C8C8;
 margin-top: 30px;
 padding: 20px 0px 0 0px;
 justify-content: space-between;
+@media (min-width: 850px) {
+padding:50px 0;
+
+}
 `
 
 export const ScrollBarDiv = styled.div`

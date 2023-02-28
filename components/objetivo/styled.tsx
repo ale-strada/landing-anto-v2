@@ -12,7 +12,11 @@ padding: 60px;
 @media (min-width: 850px) {
 padding: 40px;
 }
-
+`
+export const DescriptionContainer= styled.div`
+@media (min-width: 850px) {
+width:50%;
+}
 `
 export const ObjetivosDetailsConteiner = styled.div`
 margin: 40px;

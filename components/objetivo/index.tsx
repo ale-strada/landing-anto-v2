@@ -1,6 +1,6 @@
 import { AlejandroMessage, AlejandroMessageTwo, BeltranMessage, CarcajadaMessage, Check, VirMessage } from "@/ui/img";
 import { TextInter700, TextRoboto500 } from "@/ui/text";
-import { DetailsConteiner, ObjetivoConteiner, ObjetivosDetailsConteiner, Testimonios } from "./styled";
+import { DescriptionContainer, DetailsConteiner, ObjetivoConteiner, ObjetivosDetailsConteiner, Testimonios } from "./styled";
 
 
 
@@ -28,7 +28,7 @@ export function Objetivo(){
                 <VirMessage/>
             </div>
         </Testimonios>
-        <div style={{width:"50%"}}>
+        <DescriptionContainer>
             <TextInter700 style={{ margin:"0 60px", paddingTop:"80px"}}>Mi objetivo con cada cliente:</TextInter700>
                 <ObjetivosDetailsConteiner>
                     <DetailsConteiner>
@@ -50,7 +50,7 @@ export function Objetivo(){
                         <TextRoboto500 style={{textAlign: "left"}}>Brindar planes flexibles y a la medida de lo que sus marcas necesitan.</TextRoboto500>
                     </DetailsConteiner>
                 </ObjetivosDetailsConteiner>
-        </div>
+        </DescriptionContainer>
         </ObjetivoConteiner>        
     </div>
 
