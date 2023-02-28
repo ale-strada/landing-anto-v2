@@ -8,9 +8,16 @@ import { Faqs } from '@/components/faqs'
 import { Cartel } from '@/components/cartel'
 import ContactForm from '@/components/contact-form'
 import { Footer } from '@/components/footer'
+import styled from 'styled-components'
 
 
 const inter = Inter({ subsets: ['latin'] })
+
+const ContactoContainer = styled.div`
+@media (min-width: 850px) {
+display:flex;
+}
+`
 
 export default function Home() {
   return (
@@ -21,8 +28,10 @@ export default function Home() {
       <Servicios/>
       <Objetivo/>
       <Faqs/>
-      <Cartel/>
-      <ContactForm/>
+      <ContactoContainer>
+        <Cartel/>
+        <ContactForm/>
+      </ContactoContainer>
       <Footer/>
     </div>
     </>

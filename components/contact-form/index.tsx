@@ -70,6 +70,10 @@ export default function ContactForm() {
     flex-direction: column;
     align-items: center;
     margin: 80px auto;
+    @media (min-width: 850px) {
+    margin-left: 50px;
+    margin-top: 95px;
+    }
     `
     const Label = styled.label`
     margin: 10px 0;
