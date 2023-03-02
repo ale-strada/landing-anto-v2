@@ -31,13 +31,15 @@ max-width: 890px;
 margin:45px 0;
 ` 
 const DecoWrap = styled.div`
-position: absolute;
-top: 3483px;
-left: 855px;
+position: relative;
+bottom: 800px;
+left: 826px;
+width: 0px;
+height: 0px;
 `
 export function Faqs(){
     return <ResponsiveWrap id="faqs">
-        <div style={{margin: "40px 30px 20px"}}>
+        <div style={{margin: "40px 15px 20px"}}>
             <TextRoboto700Lila >FAQS</TextRoboto700Lila>
         </div>
         <CollapseWrap>
