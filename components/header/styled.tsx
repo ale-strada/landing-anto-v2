@@ -73,3 +73,15 @@ color: #FFFFFF;
     color:#9692D7
 }
 `
+
+export const MobileWrap = styled.div`
+@media (min-width: 550px) {
+    display:none
+}
+`
+export const DesktopWrap = styled.div`
+display: none;
+@media (min-width: 550px) {
+    display:inherit
+}
+`

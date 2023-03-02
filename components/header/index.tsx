@@ -1,8 +1,8 @@
-import { LogoReducidoAnto } from "@/ui/img";
+import { LogoDesk, LogoReducidoAnto } from "@/ui/img";
 import { TextRoboto500 } from "@/ui/text";
 import { Turn as Hamburger } from 'hamburger-react'
 import { useState } from "react";
-import { BurgerWrap, HeaderConteiner, Hover, NavMenu, UlNav } from "./styled";
+import { BurgerWrap, DesktopWrap, HeaderConteiner, Hover, MobileWrap, NavMenu, UlNav } from "./styled";
 
 export function Header(){
 
@@ -27,7 +27,12 @@ export function Header(){
 
 
     return<HeaderConteiner>
-        <LogoReducidoAnto/>
+        <MobileWrap>
+            <LogoReducidoAnto/>
+        </MobileWrap>
+        <DesktopWrap>
+            <LogoDesk/>
+        </DesktopWrap>
         <BurgerWrap>
             <Hamburger color="#FFFFFF" toggled={isOpen} toggle={setOpen} />
         </BurgerWrap>

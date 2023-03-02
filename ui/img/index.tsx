@@ -25,6 +25,7 @@ import Carcajada from "./carcajada.svg"
 import Beltran from "./Beltran.svg"
 import Vir from "./vir.svg"
 import Faqs from "./Frame.svg"
+import LogoBig from "./Logo-grande.svg"
 
 export function LogoReducidoAnto(){
     return <LogoReducido/>
@@ -137,4 +138,8 @@ export function VirMessage(){
 }
 export function FaqsDeco(){
     return <Faqs/>
+}
+
+export function LogoDesk(){
+    return <LogoBig/>
 }

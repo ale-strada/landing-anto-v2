@@ -39,7 +39,7 @@ height: 0px;
 `
 export function Faqs(){
     return <ResponsiveWrap id="faqs">
-        <div style={{margin: "40px 15px 20px"}}>
+        <div style={{margin: "40px 10px 20px"}}>
             <TextRoboto700Lila >FAQS</TextRoboto700Lila>
         </div>
         <CollapseWrap>
@@ -50,15 +50,15 @@ export function Faqs(){
         <FaqsDesk>
             <FaqsConrainer>
                 <TextRoboto700Negro style={{color:"#878282", fontSize:"32px"}}>¿Necesito sólo un logo?</TextRoboto700Negro>
-                <CardDetailsText style={{fontSize:"24px"}}>Si quieres identificarte y destacar, es mejor invertir tiempo y dinero en crear una identidad visual completa, recordemos que el logo es solo un identificador de tu marca en un sistema visual.</CardDetailsText>
+                <CardDetailsText style={{fontSize:"24px", margin:"10px"}}>Si quieres identificarte y destacar, es mejor invertir tiempo y dinero en crear una identidad visual completa, recordemos que el logo es solo un identificador de tu marca en un sistema visual.</CardDetailsText>
             </FaqsConrainer>
             <FaqsConrainer>
                 <TextRoboto700Negro style={{color:"#878282", fontSize:"32px"}}>¿Qué información necesito?</TextRoboto700Negro>
-                <CardDetailsText style={{fontSize:"24px"}}>Lo ideal es primero sentar las bases de tu marca, conectando con tu cliente ideal, haciendo 2 tareas: un moodboard y el brief los cuales ayudarán a establecer una visión conceptual.</CardDetailsText>
+                <CardDetailsText style={{fontSize:"24px", margin:"10px"}}>Lo ideal es primero sentar las bases de tu marca, conectando con tu cliente ideal, haciendo 2 tareas: un moodboard y el brief los cuales ayudarán a establecer una visión conceptual.</CardDetailsText>
             </FaqsConrainer>
             <FaqsConrainer>
                 <TextRoboto700Negro style={{color:"#878282", fontSize:"32px"}}>¿Cómo es el proceso?</TextRoboto700Negro>
-                <CardDetailsText style={{fontSize:"24px"}}>Todo el proceso es por vía email así que debes estar atento a tu correo. Tendremos una reunión al iniciar, una de revisión conceptual y otra al finalizar.</CardDetailsText>
+                <CardDetailsText style={{fontSize:"24px", margin:"10px"}}>Todo el proceso es por vía email así que debes estar atento a tu correo. Tendremos una reunión al iniciar, una de revisión conceptual y otra al finalizar.</CardDetailsText>
             </FaqsConrainer>
             <DecoWrap>
                 <FaqsDeco/>

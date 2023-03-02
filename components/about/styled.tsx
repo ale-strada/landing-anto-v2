@@ -14,6 +14,17 @@ export const AboutTextConteiner = styled.div`
     bottom: 505px;
 }
 `
+export const WrapMobile = styled.div`
+max-width:265px;
+margin-top:40px;
+@media (min-width: 550px) {
+    
+}
+
+@media (min-width: 850px) {
+    max-width:410px;
+}
+`
 
 export const AboutSection = styled.section`
 background-color:#B1F4CF;
