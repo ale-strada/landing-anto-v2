@@ -4,7 +4,7 @@ export const AboutTextConteiner = styled.div`
     position: absolute;
     bottom: 940px;
     left: 100px;
-@media (min-width: 550px) {
+@media (min-width: 500px) {
     bottom: 130px;
     left: 530px;
 }
@@ -17,7 +17,7 @@ export const AboutTextConteiner = styled.div`
 export const WrapMobile = styled.div`
 max-width:265px;
 margin-top:40px;
-@media (min-width: 550px) {
+@media (min-width: 500px) {
     
 }
 
@@ -41,14 +41,14 @@ background-color:#BCBCED;
 }
 `
 export const FotoWrapMovile = styled.div`
-@media (min-width: 550px) {
+@media (min-width: 500px) {
     display: none;
 }
 `
 
 export const FotoWrapTablet = styled.div`
     display:none;
-@media (min-width: 550px) {
+@media (min-width: 500px) {
     display:initial
 }
 @media (min-width: 850px) {
@@ -57,7 +57,7 @@ export const FotoWrapTablet = styled.div`
 `
 export const FotoWrapDesktop = styled.div`
     display:none;
-@media (min-width: 550px) {
+@media (min-width: 500px) {
     display:none;
 }
 @media (min-width: 850px) {

@@ -24,7 +24,7 @@ flex-direction: column;
 align-items: center;
 background: #9692D7;
 
-@media (min-width: 550px) {
+@media (min-width: 500px) {
     display:flex;
     height: 140px;
     background: none;
@@ -47,7 +47,7 @@ align-items: flex-start;
 height: 60%;
 margin-top: 60px;
 
-@media (min-width: 550px) {
+@media (min-width: 500px) {
     flex-direction: row;
     justify-content: space-around;
     width: 90%;
@@ -56,7 +56,7 @@ margin-top: 60px;
 
 export const BurgerWrap = styled.div`
 z-index:5;
-@media (min-width: 550px) {
+@media (min-width: 500px) {
     display:none
 }
 `
@@ -75,13 +75,13 @@ color: #FFFFFF;
 `
 
 export const MobileWrap = styled.div`
-@media (min-width: 550px) {
+@media (min-width: 500px) {
     display:none
 }
 `
 export const DesktopWrap = styled.div`
 display: none;
-@media (min-width: 550px) {
+@media (min-width: 500px) {
     display:inherit
 }
 `
