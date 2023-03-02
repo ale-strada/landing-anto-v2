@@ -22,6 +22,9 @@ display:flex;
 export default function Home() {
   return (
     <>
+    <Head>
+      <title>Antonella Design</title>
+    </Head>
     <div>
       <Header/>
       <About/>

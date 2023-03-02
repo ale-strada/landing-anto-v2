@@ -7,7 +7,7 @@ export default function Document() {
       <link rel="preconnect" href="https://fonts.googleapis.com"/>
       <link rel="preconnect" href="https://fonts.gstatic.com"/>
       <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"/>
-      <title>Antonella Design</title>
+      
       <link rel="shortcut icon" href="/logo.png" />
       </Head>
       <body>
