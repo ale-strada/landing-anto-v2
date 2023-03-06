@@ -35,7 +35,7 @@ export function Servicios(){
                 <ChunoDesk/>
             </FondoChuno> 
             <FondoChunoDesk>
-                <img src="/chunofondo.png" alt="" />
+                <img src="/chunofondo.png" alt="" width="100%" height="100%"/>
             </FondoChunoDesk>
             
         </DetallesContainer>

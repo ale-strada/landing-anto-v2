@@ -13,21 +13,6 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
-        <script
-        src="https://cdn.jsdelivr.net/npm/react/umd/react.production.min.js"
-        crossOrigin=""
-        
-      ></script>
-
-      <script
-        src="https://cdn.jsdelivr.net/npm/react-dom/umd/react-dom.production.min.js"
-        crossOrigin=""
-      ></script>
-
-      <script
-        src="https://cdn.jsdelivr.net/npm/react-bootstrap@next/dist/react-bootstrap.min.js"
-        crossOrigin=""
-      ></script>
       </body>
     </Html>
   )
