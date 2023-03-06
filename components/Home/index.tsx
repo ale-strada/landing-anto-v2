@@ -13,7 +13,7 @@ const ContactoContainer = styled.div`
 display:flex;
 }
 `
-export function HomePage(){
+export default function HomePage(){
     return <div>
                 <Header/>
                 <About/>

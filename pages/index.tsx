@@ -1,5 +1,6 @@
 import Head from 'next/head'
-import { HomePage } from './Home'
+import HomePage from '../components/Home'
+
 
 
 
