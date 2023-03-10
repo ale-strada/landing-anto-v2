@@ -3,6 +3,7 @@ import { TextRoboto400, TextRoboto700Lila } from "@/ui/text";
 import styled from "styled-components";
 import CarouselServicios from "../carousel";
 import { CollapseCard } from "../collapse";
+import Image from 'next/image'
 import { DetallesContainer, DetallesPregunta, DetallesTitle, FondoChuno, FondoChunoDesk, ScrollBarDiv, ServiciosConteiner } from "./styled";
 const CardResponsiveWrap = styled.div`
 @media (min-width: 850px) {
@@ -35,7 +36,7 @@ export function Servicios(){
                 <ChunoDesk/>
             </FondoChuno> 
             <FondoChunoDesk>
-                <img src="/chunofondo.png" alt="" width="100%" height="100%"/>
+                <Image src="/chunofondo.png" alt="" width= "789" height="789" />
             </FondoChunoDesk>
             
         </DetallesContainer>
