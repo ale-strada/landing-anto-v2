@@ -67,6 +67,6 @@ export function Footer(){
             </LogosContainer>
             <LineContainer/>
         </RedesContainer>
-        <Derechos>Copyright©2022 | Todos los derechos reservados</Derechos>
+        <Derechos>Copyright©2023 | Todos los derechos reservados</Derechos>
     </FooterContainer>
 }
