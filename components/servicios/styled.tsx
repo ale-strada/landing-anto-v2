@@ -42,7 +42,7 @@ z-index:10;
 }
 @media (min-width: 850px) {
 margin: 100px 50px;
-max-width: 675px;
+/* max-width: 675px; */
 min-height: 450px;
 }
 `

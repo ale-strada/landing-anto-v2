@@ -23,21 +23,21 @@ export function Servicios(){
             <DetallesPregunta>¿Qué hago?</DetallesPregunta>
             <ScrollBarDiv>
             <CardResponsiveWrap>
-                <CollapseCard contenido="Diseño gráfico y web. Identidades corporativas, flyers publicitarios, papelería, tarjetas e invitaciones digitales, vectorización de imágenes." buttonText="Diseño gráfico y digital"/>
+                <CollapseCard contenido="Un buen branding se compone de una identidad visual que conecta, transmite, es consistente y coherente. Trabajamos a través de su historia, valores y personalidad." buttonText="Branding"/>
             </CardResponsiveWrap>
             <CardResponsiveWrap>
-                <CollapseCard contenido="Animación de identidad corporativa, presentaciones dinámicas, GIF para redes sociales, stickers para Whatsapp." buttonText="Animación 2d"/>
+                <CollapseCard contenido="La integración de este tipo de contenidos en canales como Instagram, impactan en la memoria de tu público, haciendo que tu marca sea más memorable." buttonText="GIFS y Stickers"/>
             </CardResponsiveWrap>
             <CardResponsiveWrap>
-                <CollapseCard style={{borderBottom: "1px solid #C9C8C8", paddingBottom:"20px"}} contenido="Post e stories para Instagram/Facebook, banners, headers y elementos visuales para potenciar tu web al máximo." buttonText="Redes"/>
+                <CollapseCard style={{borderBottom: "1px solid #C9C8C8", paddingBottom:"20px"}} contenido="Este servicio es el indicado para vos que ya tenés un diseño de marca, pero que buscás un empujón a la hora de crear contenido. Pensar qué subir a redes y de qué forma hacerlo puede ser agobiante. Pero acá estoy para darte una mano." buttonText="Contenido"/>
             </CardResponsiveWrap>
             </ScrollBarDiv>  
             <FondoChuno>
                 <ChunoDesk/>
             </FondoChuno> 
-            <FondoChunoDesk>
+            {/* <FondoChunoDesk>
                 <Image src="/chunofondo.png" alt="" width= "789" height="789" />
-            </FondoChunoDesk>
+            </FondoChunoDesk> */}
             
         </DetallesContainer>
         </div>
