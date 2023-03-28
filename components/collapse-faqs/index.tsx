@@ -25,14 +25,14 @@ return (
             aria-controls="collapse-text"
             aria-expanded={open}
             >
-                <TextRoboto700Negro style={{color:"#878282"}}>{props.buttonText}</TextRoboto700Negro>
+                <TextRoboto700Negro style={{color:"#878282", fontSize: "23px", textAlign: "left"}}>{props.buttonText}</TextRoboto700Negro>
             </Button> 
         </FaqsConteiner>
         <Collapse in={open}>
             <div id="collapse-text">
-            <CardDetailsText>
+            
                 {props.contenido}   
-            </CardDetailsText>
+            
             </div>
         </Collapse>
     </>

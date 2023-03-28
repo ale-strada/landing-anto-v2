@@ -80,12 +80,15 @@ font-style: normal;
 font-weight: 500;
 font-size: 16px;
 line-height: 194.52%;
-display: flex;
-align-items: center;
+/* display: flex; */
+/* align-items: center; */
 color: #878282;
 margin: 10px 30px;
+flex-direction:column;
 @media (min-width: 850px) {
 font-size:28px;
+display:inherit;
+margin: 0 auto;
 }
 `
 
