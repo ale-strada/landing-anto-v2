@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ObjetivoConteiner = styled.div `
-background: #B1F4CF;
+background: #606060;
 height: 685px;
 display: flex;
 align-items: center;

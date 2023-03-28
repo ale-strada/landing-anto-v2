@@ -9,7 +9,7 @@ bottom: 140px;
 max-width:1190px;
 margin:0 auto;
 @media (min-width: 420px) {
-bottom:0px;
+bottom:100px;
 }
 @media (min-width: 850px) {
 padding:50px;

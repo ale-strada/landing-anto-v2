@@ -11,6 +11,9 @@ color: #FFFFFF;
 @media (min-width: 420px) {
 //font-size:32px;
 }
+@media (min-width: 850px) {
+text-align:center;
+}
 `
 
 export const TitleWithShadow = styled.h2`

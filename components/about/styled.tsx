@@ -10,8 +10,17 @@ export const AboutTextConteiner = styled.div`
 }
 
 @media (min-width: 850px) {
-    left: 940px;
-    bottom: 505px;
+    /* left: 940px; */
+    left:0;
+    bottom: 0px;
+    height:100%;
+    width:100%;
+    text-align: center;
+    justify-content:center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(187, 187, 236, 0.35);
 }
 `
 export const WrapMobile = styled.div`
@@ -22,7 +31,8 @@ margin-top:40px;
 }
 
 @media (min-width: 850px) {
-    max-width:410px;
+    max-width:850px;
+    text-align: center;
 }
 `
 
@@ -38,6 +48,7 @@ background-color:#BCBCED;
 }
 
 @media (min-width: 850px) {
+background:none;
 }
 `
 export const FotoWrapMovile = styled.div`
@@ -57,10 +68,12 @@ export const FotoWrapTablet = styled.div`
 `
 export const FotoWrapDesktop = styled.div`
     display:none;
+    width:100%;
+    justify-content: center;
 @media (min-width: 500px) {
     display:none;
 }
 @media (min-width: 850px) {
-    display:initial;
+    display:flex;
 }
 `

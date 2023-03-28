@@ -1,6 +1,6 @@
 import LogoReducido from "./logo-reducido.svg"
 import FotoLila from "./fotolilaabaut.svg"
-import FotoAbout from "./fotoabout.svg"
+import FotoAboutGrisMovile from "./fotoabout.svg"
 import DesktopLogo from "./desktop-outline.svg"
 import AnimacionLogo from "./layers.svg"
 import RedesLogo from "./logo-wechat.svg"
@@ -26,9 +26,14 @@ import Beltran from "./Beltran.svg"
 import Vir from "./vir.svg"
 import Faqs from "./Frame.svg"
 import LogoBig from "./Logo-grande.svg"
+import Foto from "./Foto-about.svg"
 
 export function LogoReducidoAnto(){
     return <LogoReducido/>
+}
+
+export function FotoAbout(){
+    return <Foto/>
 }
 
 export function FotoAboutLila(){
@@ -36,7 +41,7 @@ export function FotoAboutLila(){
 }
 
 export function FotoAboutGris(){
-    return <FotoAbout style={{position: "relative", bottom: "5px"}}/>
+    return <FotoAboutGrisMovile style={{position: "relative", bottom: "5px"}}/>
 }
 
 export function Desktop(){
@@ -69,7 +74,7 @@ export function ClosedArrow(){
                 <ClosedBig/>
             </ArrowresponsiveWrap>
     </div>
-   
+
 }
 export function OpenArrow(){
     return <div>
