@@ -1,6 +1,7 @@
 import { FaqsDeco } from "@/ui/img";
 import { CardDetailsText, TextRoboto700Lila, TextRoboto700Negro } from "@/ui/text";
 import { Divide } from "hamburger-react";
+import router from "next/router";
 import styled from "styled-components";
 import { CollapseFaqs } from "../collapse-faqs";
 
@@ -40,8 +41,7 @@ height: 0px;
 `
 export function Faqs(){
     const handleClickScrollContacto = () => {
-        const element = document.getElementById('contacto');
-        if (element) {element.scrollIntoView({ behavior: 'smooth' }); }
+        router.push("/contact")
     };
 
     const handleClickScrollServicios = () => {

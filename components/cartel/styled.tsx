@@ -12,6 +12,10 @@ justify-content: space-between;
 padding: 65px;
 margin: 80px auto 0;
 @media (min-width: 850px) {
-margin-right: 0;
+max-width: none;
+width: 100%;
+margin: 30px 0;
+justify-content: space-around;
+padding: 100px 65px;
 }
 `

@@ -4,11 +4,19 @@ import "../styles/form.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Suspense } from 'react';
 import BorderSpinner from '@/components/spinner';
-
+import {
+  RecoilRoot,
+  atom,
+  selector,
+  useRecoilState,
+  useRecoilValue,
+} from 'recoil';
 
 
 export default function App({ Component, pageProps }: AppProps) {
   return<Suspense fallback={<BorderSpinner/>}>
-    <Component {...pageProps} />
+    <RecoilRoot>
+      <Component {...pageProps} />
+    </RecoilRoot>
   </Suspense>
 }

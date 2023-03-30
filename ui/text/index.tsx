@@ -15,7 +15,9 @@ color: #FFFFFF;
 text-align:center;
 }
 `
-
+export const TextRoboto500Gris = styled(TextRoboto500)`
+color: #878282;
+`
 export const TitleWithShadow = styled.h2`
 font-family: 'Roboto';
 font-style: normal;
@@ -42,7 +44,7 @@ font-size: 36px;
 line-height: 42px;
 color: #FFFFFF;
     @media (min-width: 850px) {
-    font-size:48px;
+    font-size:40px;
     }
 `
 
@@ -103,12 +105,23 @@ color: #FFFFFF;
 `
 
 export const TextInter600Lila = styled.p`
-font-family: 'Inter';
+/* font-family: 'Inter'; */
 font-style: normal;
 font-weight: 600;
-font-size: 14px;
+font-size: 16px;
 line-height: 17px;
 display: flex;
 align-items: center;
 color: #9890E3;
+`
+
+export const ContactTitle = styled.h1`
+font-family: 'Roboto';
+font-style: italic;
+font-weight: 600;
+font-size: 64px;
+line-height: 75px;
+text-align: center;
+color: #878282;
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 `

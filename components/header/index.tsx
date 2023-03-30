@@ -1,37 +1,46 @@
 import { LogoDesk, LogoReducidoAnto } from "@/ui/img";
-import { TextRoboto500 } from "@/ui/text";
 import { Turn as Hamburger } from 'hamburger-react'
+import router from "next/router";
 import { useState } from "react";
 import { BurgerWrap, DesktopWrap, HeaderConteiner, Hover, MobileWrap, NavMenu, UlNav } from "./styled";
 
 export function Header(){
 
     const [isOpen, setOpen] = useState(false)
+
+    function handleClickLogo(){
+        router.push("/")
+    }
     
     const handleClickScrollAbout = () => {
-        const element = document.getElementById('about');
-        if (element) {element.scrollIntoView({ behavior: 'smooth' }); }
+        router.push("/").then(()=>{
+            const element = document.getElementById('about');
+            if (element) {element.scrollIntoView({ behavior: 'smooth' }); }
+        })
     };
     const handleClickScrollServicios = () => {
-        const element = document.getElementById('servicios');
-        if (element) {element.scrollIntoView({ behavior: 'smooth' }); }
+        router.push("/").then(()=>{
+            const element = document.getElementById('servicios');
+            if (element) {element.scrollIntoView({ behavior: 'smooth' }); }
+        })
     };
     const handleClickScrollFaqs = () => {
-        const element = document.getElementById('faqs');
-        if (element) {element.scrollIntoView({ behavior: 'smooth' }); }
+        router.push("/").then(()=>{
+            const element = document.getElementById('faqs');
+            if (element) {element.scrollIntoView({ behavior: 'smooth' }); }
+        })
     };
     const handleClickScrollContacto = () => {
-        const element = document.getElementById('contacto');
-        if (element) {element.scrollIntoView({ behavior: 'smooth' }); }
+        router.push("/contact")
     };
 
 
     return<HeaderConteiner>
-        <MobileWrap>
-            <LogoReducidoAnto/>
+        <MobileWrap onClick={handleClickLogo}>
+            <LogoReducidoAnto />
         </MobileWrap>
-        <DesktopWrap>
-            <LogoDesk/>
+        <DesktopWrap onClick={handleClickLogo} >
+            <LogoDesk />
         </DesktopWrap>
         <BurgerWrap>
             <Hamburger color="#FFFFFF" toggled={isOpen} toggle={setOpen} />

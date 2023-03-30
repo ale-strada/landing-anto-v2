@@ -6,6 +6,9 @@ const FooterContainer = styled.div`
 height: 260px;
 background: #BCBCEE;
 padding:40px 0;
+position: relative;
+z-index: 5;
+bottom: 0;
 `
 const InfoContainer = styled.div`
 display: flex;

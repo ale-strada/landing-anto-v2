@@ -1,37 +1,48 @@
-import { sendApi } from '@/lib/hooks';
+import { sendApi, serviciosState, tamañoState } from '@/lib/hooks';
 import { ContactFormButton } from '@/ui/buttons';
 import { TextInter600Lila } from '@/ui/text';
-import { useState } from 'react';
-import styled from 'styled-components';
+import { useRecoilState, useRecoilValue } from 'recoil';
 import Swal from 'sweetalert2'
+import { CheckboxList } from '../checkbox-list';
 
 
 
 export default function ContactForm() {
-    const [nombre, setNombre] = useState("")
-    const [email, setEmail] = useState("")
-    const [mensaje, setMensaje] = useState("")
+    const tamaño = useRecoilValue(tamañoState)
+    const [servicios, setServicios] = useRecoilState(serviciosState)
+
     function handleSubmit(e:any){
         e.preventDefault()
-        setNombre(e.target.nombre.value) 
-        setEmail(e.target.email.value) 
-        setMensaje(e.target.mensaje.value)
         const contactoMensaje = {
-            nombre:nombre,
-            email:email,
-            mensaje:mensaje
+            NOMBRE:e.target.nombre.value,
+            EMAIL:e.target.email.value,
+            PAIS: e.target.pais.value,
+            TAMAÑO:tamaño,
+            LINK: e.target.link.value,
+            RUBRO:e.target.rubro.value,
+            SERVICIOS_REQUERIDOS:servicios,
+            PORQUE_ME_ELIJE:e.target.porque.value,
+            PRESUPUESTO:e.target.presupuesto.value,
+            MENSAJE:e.target.mensaje.value,
         }
-        if(contactoMensaje.nombre && contactoMensaje.email && contactoMensaje.mensaje){
-            
+        console.log(contactoMensaje);
+        
+        if(contactoMensaje.NOMBRE && 
+            contactoMensaje.EMAIL && 
+            contactoMensaje.PAIS &&
+            contactoMensaje.TAMAÑO &&
+            contactoMensaje.RUBRO &&
+            contactoMensaje.SERVICIOS_REQUERIDOS &&
+            contactoMensaje.PRESUPUESTO){
         sendApi(contactoMensaje)
         Swal.fire({
             title: "Su mensaje fue enviado",
             icon: "success",
             confirmButtonText: "ok",
         }).then(()=>{
-            setNombre("");
-            setEmail("");
-            setMensaje("")
+            setServicios([""])
+            const myForm:any = document.getElementById('contacto')
+                myForm?.reset()
         }
         ); 
         }else{
@@ -44,63 +55,37 @@ export default function ContactForm() {
         }
     }
 
-    // const Input = styled.input`
-    // padding:10px;
-    // width: 382px;
-    // height: 55px;
-    // background: rgba(152, 144, 227, 0.09);
-    // border: 1px solid #9890E3;
-    // border-radius: 14px;
-    // @media (min-width: 420px) {
-    // width:598px;
-    // }
-    // `
-    // const TextArea = styled.textarea`
-    // padding:10px;
-    // width: 382px;
-    // background: rgba(152, 144, 227, 0.09);
-    // border: 1px solid #9890E3;
-    // border-radius: 14px;
-    // height: 170px;
-    // @media (min-width: 420px) {
-    // width:598px;
-    // }
-    // `
-    // const Form = styled.form`
-    // display: flex;
-    // flex-direction: column;
-    // align-items: center;
-    // margin: 80px auto;
-    // @media (min-width: 850px) {
-    // margin-left: 50px;
-    // margin-top: 95px;
-    // }
-    // `
-    // const Label = styled.label`
-    // margin: 10px 0;
-    // `
-    // const ButtonResponsiveWrap = styled.div`
-    // width:382px;
-    // display: flex;
-    // justify-content: flex-end;
-    // @media (min-width: 420px) {
-    // width:598px;
-    // }
-    // `
 return (
     
     <form className='form-form' id='contacto' onSubmit={handleSubmit}>
-        <label className='label-form'><TextInter600Lila style={{marginBottom: "5px"}}>Tu nombre</TextInter600Lila>
+        <label className='label-form'><TextInter600Lila style={{marginBottom: "5px"}}>Nombre y Apellido</TextInter600Lila>
             <input className='input-form' type="text" name="nombre"/>
         </label>
-        <label className='label-form'><TextInter600Lila style={{marginBottom: "5px"}}>Tu mail</TextInter600Lila>
+        <label className='label-form'><TextInter600Lila style={{marginBottom: "5px"}}>Email</TextInter600Lila>
             <input className='input-form' type="email" name="email" />
         </label>
-        <label className='label-form'><TextInter600Lila style={{marginBottom: "5px"}}>Escribe tu mensaje</TextInter600Lila>
-            <textarea className='textarea-form' name="mensaje" />
+        <label className='label-form'><TextInter600Lila style={{marginBottom: "5px"}}>¿De qué país eres?</TextInter600Lila>
+            <input className='input-form' type="text" name="pais" />
+        </label>
+        <CheckboxList onChange={true} label="¿Cuál de las siguientes opciones te identifica?" checkbox={["Soy emprendedor / Trabajador independiente","Negocio pequeño","Compañía grande", "Organización sin fines de lucro"]}/>
+        <label className='label-form'><TextInter600Lila style={{marginBottom: "5px"}}>Link de página web/Instagram de tu negocio</TextInter600Lila>
+            <input className='input-form' type="text" name="link" placeholder='Si todavía no tienen coloca NA' />
+        </label>
+        <label className='label-form'><TextInter600Lila style={{marginBottom: "5px"}}>¿Cuál es el giro de tu negocio? ¿A qué se dedican o qué venden?</TextInter600Lila>
+            <textarea className='textarea-form' name="rubro" />
+        </label>
+        <CheckboxList label="¿Cuál es el servicio de tu interés?" checkbox={["Branding básico", "Branding & Social Media", "Branding & Packaging","GIFS / Stickers", "Contenido"]}/>
+        <label className='label-form'><TextInter600Lila style={{marginBottom: "5px"}}>¿Porqué requieres de mis servicios?</TextInter600Lila>
+            <textarea className='textarea-form' name="porque" />
+        </label>
+        <label className='label-form'><TextInter600Lila style={{marginBottom: "5px"}}>¿Cuánto es tu presupuesto para este proyecto?</TextInter600Lila>
+            <input className='input-form' type="text" name="presupuesto" placeholder='Si todavía no tienen coloca NA' />
+        </label>
+        <label className='label-form'><TextInter600Lila style={{marginBottom: "5px"}}>Mensaje adicional</TextInter600Lila>
+            <textarea className='textarea-form' name="mensaje" placeholder='Si elegiste Branding & Packaging aquí puedes especificar en detalle los elementos que se requieren' />
         </label>
         <div className='button-wrap-form'>
-            <ContactFormButton type="submit" text="Enviar mensaje"/> 
+            <ContactFormButton type="submit" text="Enviar"/> 
         </div>
     </form>
 );

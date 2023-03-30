@@ -3,12 +3,20 @@ import { Servicios } from '@/components/servicios'
 import { Objetivo } from '@/components/objetivo'
 import { Faqs } from '@/components/faqs'
 import { Cartel } from '@/components/cartel'
-import ContactForm from '@/components/contact-form'
 import styled from 'styled-components'
+import { ButtonToContact } from '@/ui/buttons'
+import { Arrow } from '@/ui/img'
+import { TextInter700 } from '@/ui/text'
+import router from "next/router";
+
 
 const ContactoContainer = styled.div`
 @media (min-width: 850px) {
 display:flex;
+flex-direction: column;
+align-items: center;
+margin: 40px auto;
+max-width:70%;
 }
 `
 export default function HomePage(){
@@ -19,7 +27,12 @@ export default function HomePage(){
                 <Faqs/>
                 <ContactoContainer>
                     <Cartel/>
-                    <ContactForm/>
+                    <ButtonToContact onClick={()=> {router.push("/contact")}} style={{alignSelf:"end"}}>
+                        <div style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+                            <TextInter700 style={{color:" #9890E3", fontSize:"16px", margin:"0px"}}>Comenzar un proyecto juntos </TextInter700> 
+                            <Arrow style={{marginLeft:"10px"}}/>
+                        </div>
+                    </ButtonToContact>
                 </ContactoContainer>
     </div>
 }

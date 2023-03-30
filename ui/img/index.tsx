@@ -27,6 +27,7 @@ import Vir from "./vir.svg"
 import Faqs from "./Frame.svg"
 import LogoBig from "./Logo-grande.svg"
 import Foto from "./Foto-about.svg"
+import Flecha from "./arrowToContact.svg"
 
 export function LogoReducidoAnto(){
     return <LogoReducido/>
@@ -147,4 +148,9 @@ export function FaqsDeco(){
 
 export function LogoDesk(){
     return <LogoBig/>
+}
+export function Arrow(props:any){
+    return <div style={props.style}>
+            <Flecha/>
+    </div>
 }
