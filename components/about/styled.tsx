@@ -31,11 +31,17 @@ margin-top:40px;
 }
 
 @media (min-width: 850px) {
+    display: none
+}
+`
+export const WrapDesktop = styled.div`
+display: none;
+@media (min-width: 850px) {
+    display: initial;
     max-width:850px;
     text-align: center;
 }
 `
-
 export const AboutSection = styled.section`
 background-color:#B1F4CF;
 position: relative; 
