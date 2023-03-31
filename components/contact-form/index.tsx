@@ -79,7 +79,7 @@ return (
             <textarea className='textarea-form' name="porque" />
         </label>
         <label className='label-form'><TextInter600Lila style={{marginBottom: "5px"}}>¿Cuánto es tu presupuesto para este proyecto?</TextInter600Lila>
-            <input className='input-form' type="text" name="presupuesto" placeholder='Si todavía no tienen coloca NA' />
+            <input className='input-form' type="text" name="presupuesto" placeholder='' />
         </label>
         <label className='label-form'><TextInter600Lila style={{marginBottom: "5px"}}>Mensaje adicional</TextInter600Lila>
             <textarea className='textarea-form' name="mensaje" placeholder='Si elegiste Branding & Packaging aquí puedes especificar en detalle los elementos que se requieren' />

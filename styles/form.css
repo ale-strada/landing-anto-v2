@@ -54,8 +54,11 @@ margin-top: 95px;}
 
 .label-form{
     margin: 10px 0;
+    width: 382px;
 }
-
+@media (min-width: 420px) {
+    .label-form{width:598px;}
+    }
 
 .button-wrap-form{width:382px;
 display: flex;

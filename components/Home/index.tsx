@@ -11,9 +11,13 @@ import router from "next/router";
 
 
 const ContactoContainer = styled.div`
-@media (min-width: 850px) {
-display:flex;
-flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+    justify-content: space-between;
+    height: 550px;
+
+    @media (min-width: 850px) {
 align-items: center;
 margin: 40px auto;
 max-width:70%;

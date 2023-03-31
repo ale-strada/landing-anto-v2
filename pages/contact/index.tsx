@@ -19,12 +19,7 @@ export default function  ContactPage(){
         }}
         >Hablemos de tu proyecto</ContactTitle>
         <React.Fragment>
-            <TextRoboto500Gris style={{
-                maxWidth:"1000px", 
-                textAlign:"justify", 
-                margin:"70px auto",
-                padding: "20px"
-                }}>Para poder cotizar y agendar tu proyecto, debes rellenar este formulario con el mayor detalle posible. Si cuento con disponibilidad y tu proyecto es un buen match, me estaré poniendo en contacto contigo dentro de las 72h hábiles de haber enviado el formulario.</TextRoboto500Gris>
+            <TextRoboto500Gris>Para poder cotizar y agendar tu proyecto, debes rellenar este formulario con el mayor detalle posible. Si cuento con disponibilidad y tu proyecto es un buen match, me estaré poniendo en contacto contigo dentro de las 72h hábiles de haber enviado el formulario.</TextRoboto500Gris>
         </React.Fragment>   
         <ContactForm/>
         <Image className="form-img" src={picture} alt="" /> 

@@ -21,10 +21,13 @@ color: #FFFFFF;
 `
 
 export const Button = styled.button`
-width: 326px;
+width: 100%;
 height: 50px;
 border: 3px solid #9890E3;
 border-radius: 14px;
 background:none;
 box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
+@media (min-width: 500px) {
+    width:362px;
+}
 `

@@ -16,7 +16,15 @@ text-align:center;
 }
 `
 export const TextRoboto500Gris = styled(TextRoboto500)`
+font-size: 20px;
 color: #878282;
+max-width:1000px; 
+text-align:justify; 
+margin:70px auto;
+padding: 20px;
+@media (min-width: 850px) {
+font-size: 24px;
+}
 `
 export const TitleWithShadow = styled.h2`
 font-family: 'Roboto';
