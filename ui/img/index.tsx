@@ -25,9 +25,10 @@ import Carcajada from "./carcajada.svg"
 import Beltran from "./Beltran.svg"
 import Vir from "./vir.svg"
 import Faqs from "./Frame.svg"
-import LogoBig from "./Logo-grande.svg"
+import LogoBig from "./logo-amplio.svg"
 import Foto from "./Foto-about.svg"
 import Flecha from "./arrowToContact.svg"
+import TabletLogo from "./Logo-grande.svg"
 
 export function LogoReducidoAnto(){
     return <LogoReducido/>
@@ -154,3 +155,7 @@ export function Arrow(props:any){
             <Flecha/>
     </div>
 }
+export function LogoTablet(){
+    return <TabletLogo/>
+}
+

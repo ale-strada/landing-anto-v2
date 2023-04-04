@@ -30,11 +30,11 @@ background: #9692D7;
     background: none;
     flex-direction: row;
     justify-content: space-around;
-    width: 60%;
+    width: 80%;
 }
 
 @media (min-width: 850px) {
-    width: 40%
+    width: 60%
 }
 
 `
@@ -81,7 +81,16 @@ export const MobileWrap = styled.div`
 `
 export const DesktopWrap = styled.div`
 display: none;
+@media (min-width: 850px) {
+    display:inherit
+}
+`
+export const TabletWrap = styled.div`
+display: none;
 @media (min-width: 500px) {
     display:inherit
+}
+@media (min-width: 850px) {
+    display:none;
 }
 `

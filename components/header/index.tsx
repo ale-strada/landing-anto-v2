@@ -1,8 +1,8 @@
-import { LogoDesk, LogoReducidoAnto } from "@/ui/img";
+import { LogoDesk, LogoReducidoAnto, LogoTablet } from "@/ui/img";
 import { Turn as Hamburger } from 'hamburger-react'
 import router from "next/router";
 import { useState } from "react";
-import { BurgerWrap, DesktopWrap, HeaderConteiner, Hover, MobileWrap, NavMenu, UlNav } from "./styled";
+import { BurgerWrap, DesktopWrap, HeaderConteiner, Hover, MobileWrap, NavMenu, TabletWrap, UlNav } from "./styled";
 
 export function Header(){
 
@@ -33,12 +33,18 @@ export function Header(){
     const handleClickScrollContacto = () => {
         router.push("/contact")
     };
+    const handleClickScrollPortafolio = () => {
+        router.push("https://www.behance.net/antonellajaime")
+    };
 
 
     return<HeaderConteiner>
         <MobileWrap onClick={handleClickLogo}>
             <LogoReducidoAnto />
         </MobileWrap>
+        <TabletWrap onClick={handleClickLogo} >
+            <LogoTablet />
+        </TabletWrap>
         <DesktopWrap onClick={handleClickLogo} >
             <LogoDesk />
         </DesktopWrap>
@@ -51,6 +57,7 @@ export function Header(){
                 <Hover style={{cursor:"pointer"}} onClick={handleClickScrollServicios}>Servicios</Hover>
                 <Hover style={{cursor:"pointer"}} onClick={handleClickScrollFaqs}>FAQS</Hover>
                 <Hover style={{cursor:"pointer"}} onClick={handleClickScrollContacto}>Contacto</Hover>
+                <Hover style={{cursor:"pointer"}} onClick={handleClickScrollPortafolio}>Portafolio</Hover>
             </UlNav>
         </NavMenu>
 
