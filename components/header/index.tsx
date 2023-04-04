@@ -39,13 +39,13 @@ export function Header(){
 
 
     return<HeaderConteiner>
-        <MobileWrap onClick={handleClickLogo}>
+        <MobileWrap style={{cursor:"pointer"}} onClick={handleClickLogo}>
             <LogoReducidoAnto />
         </MobileWrap>
-        <TabletWrap onClick={handleClickLogo} >
+        <TabletWrap style={{cursor:"pointer"}} onClick={handleClickLogo} >
             <LogoTablet />
         </TabletWrap>
-        <DesktopWrap onClick={handleClickLogo} >
+        <DesktopWrap style={{cursor:"pointer"}} onClick={handleClickLogo} >
             <LogoDesk />
         </DesktopWrap>
         <BurgerWrap>
