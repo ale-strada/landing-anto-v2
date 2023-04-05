@@ -10,11 +10,7 @@ export default function Home() {
     <Head>
     <title>Antonella Design</title>
     </Head>
-    <div>
-      <Header/>
-      <HomePage/>
-      <Footer/>
-    </div>
+    <HomePage/>
     </>
   )
 }

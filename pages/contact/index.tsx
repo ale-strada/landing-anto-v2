@@ -6,6 +6,7 @@ import Head from "next/head";
 import React from "react";
 import Image from 'next/image'
 import picture from "../../public/contacto-img.png"
+import { Layout } from "@/components/layout";
 
 
 export default function  ContactPage(){
@@ -13,7 +14,7 @@ export default function  ContactPage(){
     <Head>
         <title>Contacto</title>
     </Head>
-    <Header/>
+    <Layout>
         <ContactTitle style={{
             marginTop: "195px"
         }}
@@ -23,6 +24,6 @@ export default function  ContactPage(){
         </React.Fragment>   
         <ContactForm/>
         <Image className="form-img" src={picture} alt="" /> 
-    <Footer/>
+    </Layout>
     </>
 };

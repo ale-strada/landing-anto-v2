@@ -1,6 +1,7 @@
 import { BrandCard } from "@/components/brand-card";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
+import { Layout } from "@/components/layout";
 import { TextRoboto500, TextRoboto700 } from "@/ui/text";
 import Image from 'next/image'
 import styled from "styled-components";
@@ -26,8 +27,7 @@ justify-content: space-around;
 padding: 30px;
 `
 export default function Brand(){
-    return <>
-    <Header/>
+    return <Layout>
     <HeroContainer>
     <Image src={"/brand-hero.png"} alt={""} width={1440} height={1370}/>
     <BrandHero>
@@ -53,6 +53,5 @@ export default function Brand(){
         />
     </div>
     
-    <Footer/>
-    </>
+    </Layout>
 }

@@ -8,6 +8,7 @@ import { ButtonToContact } from '@/ui/buttons'
 import { Arrow } from '@/ui/img'
 import { TextInter700 } from '@/ui/text'
 import router from "next/router";
+import { Layout } from '../layout'
 
 
 const ContactoContainer = styled.div`
@@ -24,7 +25,7 @@ max-width:70%;
 }
 `
 export default function HomePage(){
-    return <div>
+    return <Layout>
                 <About/>
                 <Servicios/>
                 <Objetivo/>
@@ -38,5 +39,5 @@ export default function HomePage(){
                         </div>
                     </ButtonToContact>
                 </ContactoContainer>
-    </div>
+    </Layout>
 }
