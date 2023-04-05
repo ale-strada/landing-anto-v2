@@ -58,8 +58,8 @@ export function Faqs(){
             <CollapseFaqs buttonText="¿Qué información necesito?" contenido ={<CardDetailsText>Lo ideal es primero sentar las bases de tu marca, conectando con tu cliente ideal, haciendo 2 tareas: un moodboard y el brief los cuales ayudarán a establecer una visión conceptual.</CardDetailsText>} />
             <CollapseFaqs buttonText="¿Cómo adquiero tus servicios?" contenido ={
                 <div>
-                    <CardDetailsText>Como primera medida debes conocer los servicios que ofrezco. Si aún no los conoces puedes verlos haciendo <a style={{color:"var(--bs-link-color)"}} onClick={handleClickScrollServicios}>click aquí</a>.</CardDetailsText>
-                    <CardDetailsText>Una vez que sepas qué servicio te gustaría contratar, llena el formulario que se encuentra en la parte de Contacto o haz <a style={{color:"var(--bs-link-color)"}} onClick={handleClickScrollContacto}>click aquí</a>.</CardDetailsText>
+                    <CardDetailsText>Como primera medida debes conocer los servicios que ofrezco. Si aún no los conoces puedes verlos haciendo <span style={{color:"var(--bs-link-color)"}} onClick={handleClickScrollServicios}>click aquí</span>.</CardDetailsText>
+                    <CardDetailsText>Una vez que sepas qué servicio te gustaría contratar, llena el formulario que se encuentra en la parte de Contacto o haz <span style={{color:"var(--bs-link-color)"}} onClick={handleClickScrollContacto}>click aquí</span>.</CardDetailsText>
                     <CardDetailsText>Enviado el formulario, me comunicaré contigo al correo que proporcionaste en un plazo de 72hs hábiles. Recibirás la cotización del servicio solicitado y si estás de acuerdo,  una vez realizada la seña del servicio, agendaremos una videollamada para comenzar a trabajar juntos.</CardDetailsText>                
                 </div>
             } />
@@ -83,8 +83,8 @@ export function Faqs(){
             </FaqsConrainer>
             <FaqsConrainer>
                 <TextRoboto700Negro style={{color:"#878282", fontSize:"32px"}}>¿Cómo adquiero tus servicios?</TextRoboto700Negro>
-                <CardDetailsText style={{fontSize:"24px", margin:"10px"}}>Como primera medida debes conocer los servicios que ofrezco. Si aún no los conoces puedes verlos haciendo <a style={{color:"var(--bs-link-color)", cursor:"pointer"}} onClick={handleClickScrollServicios}>click aquí</a>.</CardDetailsText>
-                <CardDetailsText style={{fontSize:"24px", margin:"10px"}}>Una vez que sepas qué servicio te gustaría contratar, llena el formulario que se encuentra en la parte de Contacto o haz <a style={{color:"var(--bs-link-color)", cursor:"pointer"}} onClick={handleClickScrollContacto}>click aquí</a>.</CardDetailsText>
+                <CardDetailsText style={{fontSize:"24px", margin:"10px"}}>Como primera medida debes conocer los servicios que ofrezco. Si aún no los conoces puedes verlos haciendo <span style={{color:"var(--bs-link-color)", cursor:"pointer"}} onClick={handleClickScrollServicios}>click aquí</span>.</CardDetailsText>
+                <CardDetailsText style={{fontSize:"24px", margin:"10px"}}>Una vez que sepas qué servicio te gustaría contratar, llena el formulario que se encuentra en la parte de Contacto o haz <span style={{color:"var(--bs-link-color)", cursor:"pointer"}} onClick={handleClickScrollContacto}>click aquí</span>.</CardDetailsText>
                 <CardDetailsText style={{fontSize:"24px", margin:"10px"}}>Enviado el formulario, me comunicaré contigo al correo que proporcionaste en un plazo de 72hs hábiles. Recibirás la cotización del servicio solicitado y si estás de acuerdo,  una vez realizada la seña del servicio, agendaremos una videollamada para comenzar a trabajar juntos.</CardDetailsText>
             </FaqsConrainer>
             <FaqsConrainer>
