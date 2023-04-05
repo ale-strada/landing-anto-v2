@@ -133,3 +133,35 @@ text-align: center;
 color: #878282;
 text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 `
+
+export const BrandCardTitle = styled.h2 `
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 600;
+font-size: 48px;
+line-height: 56px;
+color: #FFFFFF;
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+margin: 60px 0;
+`
+export const BrandCardContent = styled.p`
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 40px;
+line-height: 149.19%;
+display: flex;
+align-items: center;
+text-align: justify;
+color: #FFFFFF;
+`
+export const BrandCardList = styled.li `
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 40px;
+line-height: 149.19%;
+display: flex;
+align-items: center;
+color: #FFFFFF;
+`
