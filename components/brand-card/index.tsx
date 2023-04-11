@@ -22,6 +22,7 @@ type cardBrandProps = {
     title:string,
     content:string,
     list:string[],
+    listDescription?:string,
 }
 export function BrandCard(props:cardBrandProps){
     function handleClick(){
@@ -32,6 +33,7 @@ export function BrandCard(props:cardBrandProps){
         <BrandCardTitle>{props.title}</BrandCardTitle>
         <BrandCardContent>{props.content}</BrandCardContent>
         <ListContainer >
+            <BrandCardContent style={{marginBottom:"80px"}}>{props.listDescription? props.listDescription : ""}</BrandCardContent>
             {props.list.map((s:string)=>{
                 return <BrandCardList key={s}>· {" "+s}</BrandCardList>
             })}
@@ -42,7 +44,8 @@ export function BrandCard(props:cardBrandProps){
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            alignSelf: "end"
+            alignSelf: "end",
+            zIndex:"5",
         }}>
             <TextInter600Lila style={{margin:"0"}}>Cotizar este paquete</TextInter600Lila>
         </ButtonToContact>

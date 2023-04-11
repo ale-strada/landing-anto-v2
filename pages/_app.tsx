@@ -14,9 +14,12 @@ import {
 
 
 export default function App({ Component, pageProps }: AppProps) {
-  return<Suspense fallback={<BorderSpinner/>}>
+  return<>
+    <Suspense fallback={"loading..."}>
     <RecoilRoot>
       <Component {...pageProps} />
     </RecoilRoot>
   </Suspense>
+  </>
+
 }
