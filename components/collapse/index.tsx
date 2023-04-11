@@ -6,7 +6,15 @@ import Collapse from 'react-bootstrap/Collapse';
 import { DetalleCardConteiner } from '../servicios/styled';
 import { ButtonPaquetes } from '@/ui/buttons/styled';
 
-export function CollapseCard(props:any) {
+type CollapseProps = {
+    buttonText:string,
+    contenido:string,
+    paquete?:boolean,
+    onClick?:()=>{},
+    style?:{}
+}
+
+export function CollapseCard(props:CollapseProps) {
 const [open, setOpen] = useState(false);
 
 return (

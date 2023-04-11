@@ -14,6 +14,7 @@ export function Servicios(){
 
     function handleBrand (){
         router.push("/brand")
+        return true
     }
 
     return <div id="servicios">
@@ -28,7 +29,7 @@ export function Servicios(){
             <DetallesPregunta>¿Qué hago?</DetallesPregunta>
             <ScrollBarDiv>
             <CardResponsiveWrap>
-                <CollapseCard paquete="true" onClick = {handleBrand} contenido="Un buen branding se compone de una identidad visual que conecta, transmite, es consistente y coherente. Trabajamos a través de su historia, valores y personalidad." buttonText="Branding"/>
+                <CollapseCard paquete={true}  onClick = {handleBrand} contenido="Un buen branding se compone de una identidad visual que conecta, transmite, es consistente y coherente. Trabajamos a través de su historia, valores y personalidad." buttonText="Branding"/>
             </CardResponsiveWrap>
             <CardResponsiveWrap>
                 <CollapseCard contenido="La integración de este tipo de contenidos en canales como Instagram, impactan en la memoria de tu público, haciendo que tu marca sea más memorable." buttonText="GIFS y Stickers"/>
