@@ -3,14 +3,19 @@ import { TextRoboto400, TextRoboto700Lila } from "@/ui/text";
 import styled from "styled-components";
 import CarouselServicios from "../carousel";
 import { CollapseCard } from "../collapse";
-import Image from 'next/image'
 import { DetallesContainer, DetallesPregunta, DetallesTitle, FondoChuno, FondoChunoDesk, ScrollBarDiv, ServiciosConteiner } from "./styled";
+import router from "next/router";
 const CardResponsiveWrap = styled.div`
 @media (min-width: 850px) {
 min-height:130px;
 }
 `
 export function Servicios(){
+
+    function handleBrand (){
+        router.push("/brand")
+    }
+
     return <div id="servicios">
         <ServiciosConteiner>
             <CarouselServicios/>
@@ -23,7 +28,7 @@ export function Servicios(){
             <DetallesPregunta>¿Qué hago?</DetallesPregunta>
             <ScrollBarDiv>
             <CardResponsiveWrap>
-                <CollapseCard contenido="Un buen branding se compone de una identidad visual que conecta, transmite, es consistente y coherente. Trabajamos a través de su historia, valores y personalidad." buttonText="Branding"/>
+                <CollapseCard paquete="true" onClick = {handleBrand} contenido="Un buen branding se compone de una identidad visual que conecta, transmite, es consistente y coherente. Trabajamos a través de su historia, valores y personalidad." buttonText="Branding"/>
             </CardResponsiveWrap>
             <CardResponsiveWrap>
                 <CollapseCard contenido="La integración de este tipo de contenidos en canales como Instagram, impactan en la memoria de tu público, haciendo que tu marca sea más memorable." buttonText="GIFS y Stickers"/>

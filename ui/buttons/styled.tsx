@@ -31,3 +31,24 @@ box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
     width:362px;
 }
 `
+export const ButtonPaquetes = styled.button`
+border: 3px solid #9890E3;
+border-radius: 14px;
+box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
+background: white;
+display: flex;
+align-items: center;
+justify-content: center;
+align-self: end;
+z-index: 5;
+width: 110px;
+height: 30px;
+@media (min-width: 500px) {
+    width: 190px;
+    height: 35px;
+}
+@media (min-width: 850px) {
+    width: 254px;
+    height: 43px;
+}
+`

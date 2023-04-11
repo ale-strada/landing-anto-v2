@@ -116,11 +116,14 @@ export const TextInter600Lila = styled.p`
 /* font-family: 'Inter'; */
 font-style: normal;
 font-weight: 600;
-font-size: 16px;
+font-size: 12px;
 line-height: 17px;
 display: flex;
 align-items: center;
 color: #9890E3;
+@media (min-width: 500px) {
+    font-size:16px;
+}
 `
 
 export const ContactTitle = styled.h1`
