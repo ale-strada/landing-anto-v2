@@ -32,6 +32,7 @@ bottom: 600px;
 `
 const TagsContainer = styled.div`
 /* width: 990px; */
+height:0px;
 position: relative;
 bottom: 968px;
 left: 743px;

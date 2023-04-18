@@ -13,7 +13,7 @@ display: flex;
 flex-direction: column;
 `
 const ListContainer = styled.ul`
-margin: 120px auto;
+margin: 60px auto;
 width: 60%;
 `
 //este es el componente brand card. requiere por props el contenido para mostrar. titulo, descripcion, lista de servicios incluidos.

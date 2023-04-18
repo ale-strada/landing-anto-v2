@@ -99,6 +99,7 @@ flex-direction:column;
 font-size:28px;
 display:inherit;
 margin: 0 auto;
+padding:10px;
 }
 `
 
@@ -151,7 +152,7 @@ export const BrandCardContent = styled.p`
 font-family: 'Roboto';
 font-style: normal;
 font-weight: 500;
-font-size: 40px;
+font-size: 30px;
 line-height: 149.19%;
 display: flex;
 align-items: center;
@@ -162,7 +163,7 @@ export const BrandCardList = styled.li `
 font-family: 'Roboto';
 font-style: normal;
 font-weight: 500;
-font-size: 40px;
+font-size: 30px;
 line-height: 149.19%;
 display: flex;
 align-items: center;
