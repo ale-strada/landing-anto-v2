@@ -11,6 +11,8 @@ import {
   useRecoilState,
   useRecoilValue,
 } from 'recoil';
+import { Analytics } from '@vercel/analytics/react'
+;
 
 
 export default function App({ Component, pageProps }: AppProps) {
@@ -18,6 +20,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <Suspense fallback={"loading..."}>
     <RecoilRoot>
       <Component {...pageProps} />
+      <Analytics />
     </RecoilRoot>
   </Suspense>
   </>
