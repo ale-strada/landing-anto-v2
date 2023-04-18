@@ -24,7 +24,7 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: space-around;
-padding: 30px;
+padding: 60px;
 `
 const CardsContainer = styled.div`
 position: relative;
@@ -43,9 +43,9 @@ export default function Brand(){
     <HeroContainer>
     <Image src={"/brand-hero.png"} alt={""} width={1440} height={1370}/>
     <BrandHero>
-        <TextRoboto700 style={{fontSize:"64px"}}>BRANDING</TextRoboto700>
-        <TextRoboto500 style={{fontSize:"36px", lineHeight: "42px"}}>Cada marca tiene una identidad, personalidad, valores, atributos y características. </TextRoboto500>
-        <TextRoboto500 style={{fontSize:"36px", lineHeight: "42px"}}>
+        <TextRoboto700 style={{fontSize:"64px", marginBottom:"60px"}}>BRANDING</TextRoboto700>
+        <TextRoboto500 style={{fontSize:"36px", lineHeight: "42px", textAlign:"justify"}}>Cada marca tiene una identidad, personalidad, valores, atributos y características. </TextRoboto500>
+        <TextRoboto500 style={{fontSize:"36px", lineHeight: "42px", textAlign:"justify"}}>
         Desarrollemos el branding de tu marca usando diseños estratégicos para conectar con tu público, logrando una identidad de marca consistente, única y completa.</TextRoboto500>
     </BrandHero>
     </HeroContainer>
