@@ -14,6 +14,8 @@ padding:50px;
 }
 @media (min-width: 850px) {
 padding:80px;
+margin: 0 auto;
+max-width: 1350px;
 }
 `
 const CollapseWrap = styled.div`
@@ -49,7 +51,9 @@ export function Faqs(){
         if (element) {element.scrollIntoView({ behavior: 'smooth' }); }
     };
 
-    return <ResponsiveWrap id="faqs">
+    return <section style={{backgroundColor:"#F5F5F5"}}>
+
+        <ResponsiveWrap id="faqs">
         <div style={{margin: "40px 10px 20px"}}>
             <TextRoboto700Lila >FAQS</TextRoboto700Lila>
         </div>
@@ -105,4 +109,5 @@ export function Faqs(){
             </DecoWrap> */}
         </FaqsDesk>
     </ResponsiveWrap>
+    </section>
 }

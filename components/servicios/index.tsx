@@ -44,7 +44,6 @@ export function Servicios(){
             {/* <FondoChunoDesk>
                 <Image src="/chunofondo.png" alt="" width= "789" height="789" />
             </FondoChunoDesk> */}
-            
         </DetallesContainer>
         </div>
 }

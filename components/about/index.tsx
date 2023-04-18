@@ -28,9 +28,10 @@ export function About(){
                 <TextRoboto500 style={{backgroundColor:"#BCBCEE", width: "135px", margin:" 0 auto"}}>
                     aprovechar.
                 </TextRoboto500>
+                <TextRoboto500 style={{marginTop:"20px"}}>¡Es el momento de potenciar tu marca!</TextRoboto500>
             </WrapDesktop>
             <WrapMobile>
-                <TextRoboto500>
+                <TextRoboto500 >
                     ¡Es el momento de potenciar tu marca!
                 </TextRoboto500>
             </WrapMobile>

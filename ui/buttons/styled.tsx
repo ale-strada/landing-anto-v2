@@ -50,5 +50,6 @@ height: 30px;
 @media (min-width: 850px) {
     width: 254px;
     height: 43px;
+    margin-top:50px;
 }
 `
