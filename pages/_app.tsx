@@ -3,14 +3,7 @@ import "../styles/globals.css"
 import "../styles/form.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Suspense } from 'react';
-import BorderSpinner from '@/components/spinner';
-import {
-  RecoilRoot,
-  atom,
-  selector,
-  useRecoilState,
-  useRecoilValue,
-} from 'recoil';
+import { RecoilRoot} from 'recoil';
 import { Analytics } from '@vercel/analytics/react'
 ;
 
