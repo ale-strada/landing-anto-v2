@@ -3,6 +3,8 @@ import { Turn as Hamburger } from 'hamburger-react'
 import router from "next/router";
 import { useState } from "react";
 import { BurgerWrap, DesktopWrap, HeaderConteiner, Hover, MobileWrap, NavMenu, TabletWrap, UlNav } from "./styled";
+import { ButtonToContact } from "@/ui/buttons";
+import { TextInter700 } from "@/ui/text";
 
 export function Header(){
 
@@ -56,8 +58,19 @@ export function Header(){
                 <Hover style={{cursor:"pointer"}} onClick={handleClickScrollAbout}>Home</Hover>
                 <Hover style={{cursor:"pointer"}} onClick={handleClickScrollServicios}>Servicios</Hover>
                 <Hover style={{cursor:"pointer"}} onClick={handleClickScrollFaqs}>FAQS</Hover>
-                <Hover style={{cursor:"pointer"}} onClick={handleClickScrollContacto}>Contacto</Hover>
                 <Hover style={{cursor:"pointer"}} onClick={handleClickScrollPortafolio}>Portafolio</Hover>
+                <ButtonToContact style={{
+                    cursor:"pointer",
+                    width:"20%", 
+                    height:"50%",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    position: "relative",
+                    top: "-5px"
+                    }} onClick={handleClickScrollContacto}>
+                    <Hover style={{fontSize:"24px"}}>Contactar</Hover> 
+                </ButtonToContact>
             </UlNav>
         </NavMenu>
 
