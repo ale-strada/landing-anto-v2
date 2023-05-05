@@ -1,4 +1,4 @@
-import { ClosedArrow, OpenArrow } from '@/ui/img';
+import { ClosedArrow, OpenArrow } from '@/public/img';
 import { CardDetailsText, TextInter600Lila, TextRoboto700Negro } from '@/ui/text';
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
@@ -23,17 +23,19 @@ return (
         <DetalleCardConteiner >
         <TextRoboto700Negro>{props.buttonText}</TextRoboto700Negro>
         <Button
+        name='collapse-button'
         style={{background:"none", border:"none"}}
         onClick={() => setOpen(!open)}
-        aria-controls="collapse-text"
+        aria-controls={"collapse-text" + props.buttonText}
         aria-expanded={open}
+        aria-label="expandir"
         >
         {open? <OpenArrow/>:<ClosedArrow/>}
         </Button> 
         
         </DetalleCardConteiner>
         <Collapse in={open}>
-        <div  id="collapse-text">
+        <div>
             <div style={{display: "flex", flexDirection: "column"}}>
                 <CardDetailsText>
                     {props.contenido}   

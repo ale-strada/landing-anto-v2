@@ -1,4 +1,4 @@
-import { Address, Behance, LinkedIn, Mail, Phone, WhatsApp } from "@/ui/img"
+import { Address, Behance, LinkedIn, Mail, Phone, WhatsApp } from "@/public/img"
 import { TextRoboto500 } from "@/ui/text"
 import styled from "styled-components"
 
@@ -64,9 +64,9 @@ export function Footer(){
         <RedesContainer>
             <LineContainer/>
             <LogosContainer>
-                    <a href="https://www.linkedin.com/in/antonella-jaime-baa707201/"><LinkedIn /></a>
-                    <a href="https://wa.me/+5493512401811?text=Hola%20Antonella,%20me%20gustaría"><WhatsApp /></a>
-                    <a href="https://www.behance.net/antonellajaime"><Behance/></a>
+                    <a style={{cursor:"pointer"}} aria-label="acceso a linkedin" href="https://www.linkedin.com/in/antonella-jaime-baa707201/"><LinkedIn /></a>
+                    <a style={{cursor:"pointer"}} aria-label="acceso a whatsapp" href="https://wa.me/+5493512401811?text=Hola%20Antonella,%20me%20gustaría"><WhatsApp /></a>
+                    <a style={{cursor:"pointer"}} aria-label="acceso a behance" href="https://www.behance.net/antonellajaime"><Behance/></a>
             </LogosContainer>
             <LineContainer/>
         </RedesContainer>

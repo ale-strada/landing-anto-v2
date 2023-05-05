@@ -39,7 +39,7 @@ background: #9692D7;
 
 `
 
-export const UlNav = styled.ul`
+export const UlNav = styled.div`
 display: flex;
 flex-direction: column;
 justify-content: space-around;
@@ -92,5 +92,22 @@ display: none;
 }
 @media (min-width: 850px) {
     display:none;
+}
+`
+export const ButtonToContactHeader = styled.button`
+    cursor: pointer;
+    display: flex;
+    background: none;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -5px;
+    @media (min-width: 500px) {
+    width: 20%;
+    height: 50%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 14px;
+    border: none;
 }
 `

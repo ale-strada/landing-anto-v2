@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Animacion, Desktop, Redes } from "../img";
+import { Animacion, Desktop, Redes } from "../../public/img";
 import { TextRoboto700 } from "../text";
 
 const ServicioCardConteiner = styled.div `

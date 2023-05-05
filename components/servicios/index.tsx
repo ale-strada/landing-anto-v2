@@ -1,4 +1,4 @@
-import { ChunoDesk, ChunoDeskBig } from "@/ui/img";
+import { ChunoDesk, ChunoDeskBig } from "@/public/img";
 import { TextRoboto400, TextRoboto700Lila } from "@/ui/text";
 import styled from "styled-components";
 import CarouselServicios from "../carousel";
@@ -41,9 +41,6 @@ export function Servicios(){
             <FondoChuno>
                 <ChunoDesk/>
             </FondoChuno> 
-            {/* <FondoChunoDesk>
-                <Image src="/chunofondo.png" alt="" width= "789" height="789" />
-            </FondoChunoDesk> */}
         </DetallesContainer>
         </div>
 }

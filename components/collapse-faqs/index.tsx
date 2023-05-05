@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { CardDetailsText, TextRoboto700Negro } from '@/ui/text';
+import { TextRoboto700Negro } from '@/ui/text';
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Collapse from 'react-bootstrap/Collapse';
@@ -22,17 +22,15 @@ return (
             <Button
             style={{background:"none", border:"none"}}
             onClick={() => setOpen(!open)}
-            aria-controls="collapse-text"
+            aria-controls={"collapse-text" + props.buttonText}
             aria-expanded={open}
             >
                 <TextRoboto700Negro style={{color:"#878282", fontSize: "23px", textAlign: "left"}}>{props.buttonText}</TextRoboto700Negro>
             </Button> 
         </FaqsConteiner>
         <Collapse in={open}>
-            <div id="collapse-text">
-            
+            <div>
                 {props.contenido}   
-            
             </div>
         </Collapse>
     </>

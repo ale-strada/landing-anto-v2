@@ -26,12 +26,10 @@ return (
 
             <Carousel.Item>
                 <AnimacionCard/>
-                {/* <Carousel.Caption></Carousel.Caption> */}
             </Carousel.Item>
 
             <Carousel.Item>
                 <RedesCard/>
-                {/* <Carousel.Caption></Carousel.Caption> */}
             </Carousel.Item>
         </Carousel>
     </ResponsiveWrapCel>
@@ -41,8 +39,6 @@ return (
         <RedesCard/>
     </ResponsiveWrapTablet>
 </div>
-    
-
 );
 }
 

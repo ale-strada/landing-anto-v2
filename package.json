@@ -2,7 +2,7 @@
   "name": "landing-v2",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
+   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",

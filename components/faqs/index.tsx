@@ -1,6 +1,4 @@
-import { FaqsDeco } from "@/ui/img";
 import { CardDetailsText, TextRoboto700Lila, TextRoboto700Negro } from "@/ui/text";
-import { Divide } from "hamburger-react";
 import router from "next/router";
 import styled from "styled-components";
 import { CollapseFaqs } from "../collapse-faqs";
@@ -104,9 +102,6 @@ export function Faqs(){
                 <CardDetailsText style={{fontSize:"24px", margin:"10px"}}>Trabajo con una gran variedad de giros de negocios: gastronomía, peluquería, estética, deco, mascotas, etc.</CardDetailsText>
                 <CardDetailsText style={{fontSize:"24px", margin:"10px"}}>Te recomiendo revisar mi <a href="https://www.behance.net/antonellajaime">portafolio de trabajos</a>  para que tengas una referencia, aunque cada proyecto es único.</CardDetailsText>
             </FaqsConrainer>
-            {/* <DecoWrap>
-                <FaqsDeco/>
-            </DecoWrap> */}
         </FaqsDesk>
     </ResponsiveWrap>
     </section>

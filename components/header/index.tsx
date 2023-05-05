@@ -1,10 +1,8 @@
-import { LogoDesk, LogoReducidoAnto, LogoTablet } from "@/ui/img";
 import { Turn as Hamburger } from 'hamburger-react'
 import router from "next/router";
 import { useState } from "react";
-import { BurgerWrap, DesktopWrap, HeaderConteiner, Hover, MobileWrap, NavMenu, TabletWrap, UlNav } from "./styled";
-import { ButtonToContact } from "@/ui/buttons";
-import { TextInter700 } from "@/ui/text";
+import { BurgerWrap, ButtonToContactHeader, DesktopWrap, HeaderConteiner, Hover, MobileWrap, NavMenu, TabletWrap, UlNav } from "./styled";
+import dynamic from 'next/dynamic'
 
 export function Header(){
 
@@ -40,15 +38,24 @@ export function Header(){
     };
 
 
+    const DynamicLogoDesk = dynamic(() =>
+      import('@/public/img').then((mod) => mod.LogoDesk),{ssr:false}
+    );
+    const DynamicLogoReducidoAnto = dynamic(() =>
+      import('@/public/img').then((mod) => mod.LogoReducidoAnto),{ssr:false}
+    );
+    const DynamicLogoTablet = dynamic(() =>
+      import('@/public/img').then((mod) => mod.LogoTablet),{ssr:false}
+    );
     return<HeaderConteiner>
         <MobileWrap style={{cursor:"pointer"}} onClick={handleClickLogo}>
-            <LogoReducidoAnto />
+            <DynamicLogoReducidoAnto />
         </MobileWrap>
         <TabletWrap style={{cursor:"pointer"}} onClick={handleClickLogo} >
-            <LogoTablet />
+            <DynamicLogoTablet />
         </TabletWrap>
         <DesktopWrap style={{cursor:"pointer"}} onClick={handleClickLogo} >
-            <LogoDesk />
+            <DynamicLogoDesk />
         </DesktopWrap>
         <BurgerWrap>
             <Hamburger color="#FFFFFF" toggled={isOpen} toggle={setOpen} />
@@ -59,18 +66,9 @@ export function Header(){
                 <Hover style={{cursor:"pointer"}} onClick={handleClickScrollServicios}>Servicios</Hover>
                 <Hover style={{cursor:"pointer"}} onClick={handleClickScrollFaqs}>FAQS</Hover>
                 <Hover style={{cursor:"pointer"}} onClick={handleClickScrollPortafolio}>Portafolio</Hover>
-                <ButtonToContact style={{
-                    cursor:"pointer",
-                    width:"20%", 
-                    height:"50%",
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    position: "relative",
-                    top: "-5px"
-                    }} onClick={handleClickScrollContacto}>
+                <ButtonToContactHeader onClick={handleClickScrollContacto}>
                     <Hover style={{fontSize:"24px"}}>Contactar</Hover> 
-                </ButtonToContact>
+                </ButtonToContactHeader>
             </UlNav>
         </NavMenu>
 

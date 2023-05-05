@@ -39,11 +39,6 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     margin: 20px 0;
 }
 `
-
-export const TitleWithShadowBold = styled(TitleWithShadow)`
-font-weight: 700;
-`
-
 export const TextRoboto700 = styled.h3`
 font-family: var(--font-roboto);
 font-style: normal;

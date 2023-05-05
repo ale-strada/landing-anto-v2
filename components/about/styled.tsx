@@ -10,7 +10,6 @@ export const AboutTextConteiner = styled.div`
 }
 
 @media (min-width: 850px) {
-    /* left: 940px; */
     left:0;
     bottom: 0px;
     height:100%;

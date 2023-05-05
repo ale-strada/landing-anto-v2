@@ -1,4 +1,4 @@
-import { AlejandroMessage, AlejandroMessageTwo, BeltranMessage, CarcajadaMessage, Check, VirMessage } from "@/ui/img";
+import { AlejandroMessage, AlejandroMessageTwo, BeltranMessage, CarcajadaMessage, Check, VirMessage } from "@/public/img";
 import { TextInter700, TextRoboto500 } from "@/ui/text";
 import { DescriptionContainer, DetailsConteiner, ObjetivoConteiner, ObjetivosDetailsConteiner, Testimonios } from "./styled";
 

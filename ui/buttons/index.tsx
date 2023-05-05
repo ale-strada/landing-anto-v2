@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { ClosedArrow, OpenArrow } from "../img"
+import { ClosedArrow, OpenArrow } from "../../public/img"
 import { Button, ButtonSinFondo, ContactButton } from "./styled"
 
 

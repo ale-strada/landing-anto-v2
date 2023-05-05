@@ -1,14 +1,8 @@
-import { About } from '@/components/about'
-import { Servicios } from '@/components/servicios'
-import { Objetivo } from '@/components/objetivo'
-import { Faqs } from '@/components/faqs'
-import { Cartel } from '@/components/cartel'
 import styled from 'styled-components'
-import { ButtonToContact } from '@/ui/buttons'
-import { Arrow } from '@/ui/img'
+import { Arrow } from '@/public/img'
 import { TextInter700 } from '@/ui/text'
 import router from "next/router";
-import { Layout } from '../layout'
+import dynamic from 'next/dynamic'
 
 
 const ContactoContainer = styled.div`
@@ -24,20 +18,42 @@ margin: 40px auto;
 max-width:70%;
 }
 `
-export default function HomePage(){
-    return <Layout>
-                <About/>
-                <Servicios/>
-                <Objetivo/>
-                <Faqs/>
+const DynamicLayout = dynamic(() =>
+  import('@/components/layout').then((mod) => mod.Layout),{ssr: false}
+);
+const DynamicAbout = dynamic(() =>
+  import('@/components/about').then((mod) => mod.About),{ssr: false}
+);
+const DynamicServicios = dynamic(() =>
+  import('@/components/servicios').then((mod) => mod.Servicios),{ssr: false}
+);
+const DynamicObjetivo = dynamic(() =>
+  import('@/components/objetivo').then((mod) => mod.Objetivo),{ssr: false}
+);
+const DynamicFaqs = dynamic(() =>
+    import('@/components/faqs').then((mod) => mod.Faqs),{ssr: false}
+);
+const DynamicCartel = dynamic(() =>
+    import('@/components/cartel').then((mod) => mod.Cartel),{ssr: false}
+);
+const DynamicButtonToContact = dynamic(() =>
+    import('@/ui/buttons').then((mod) => mod.ButtonToContact),{ssr: false}
+);
+
+export function HomePage(){
+    return <DynamicLayout>
+                <DynamicAbout/>
+                <DynamicServicios/>
+                <DynamicObjetivo/>
+                <DynamicFaqs/>
                 <ContactoContainer>
-                    <Cartel/>
-                    <ButtonToContact onClick={()=> {router.push("/contact")}} style={{alignSelf:"end"}}>
+                    <DynamicCartel/>
+                    <DynamicButtonToContact onClick={()=> {router.push("/contact")}} style={{alignSelf:"end"}}>
                         <div style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
                             <TextInter700 style={{color:" #9890E3", fontSize:"16px", margin:"0px"}}>Comenzar un proyecto juntos </TextInter700> 
                             <Arrow style={{marginLeft:"10px"}}/>
                         </div>
-                    </ButtonToContact>
+                    </DynamicButtonToContact>
                 </ContactoContainer>
-    </Layout>
+    </DynamicLayout>
 }
