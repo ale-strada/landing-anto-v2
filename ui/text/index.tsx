@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const TextRoboto500 = styled.p`
-font-family: 'Roboto';
+font-family: var(--font-roboto);
 font-style: normal;
 font-weight: 500;
 font-size: 24px;
@@ -27,7 +27,7 @@ font-size: 24px;
 }
 `
 export const TitleWithShadow = styled.h2`
-font-family: 'Roboto';
+font-family: var(--font-roboto);
 font-style: normal;
 font-weight: 400;
 font-size: 32px;
@@ -45,7 +45,7 @@ font-weight: 700;
 `
 
 export const TextRoboto700 = styled.h3`
-font-family: 'Roboto';
+font-family: var(--font-roboto);
 font-style: normal;
 font-weight: 700;
 font-size: 36px;
@@ -57,7 +57,7 @@ color: #FFFFFF;
 `
 
 export const TextRoboto400 = styled.p`
-font-family: 'Roboto';
+font-family: var(--font-roboto);
 font-style: normal;
 font-weight: 400;
 font-size: 20px;
@@ -85,7 +85,7 @@ font-size:48px;
 }
 `
 export const CardDetailsText = styled.p`
-font-family: 'Roboto';
+font-family: var(--font-roboto);
 font-style: normal;
 font-weight: 500;
 font-size: 16px;
@@ -104,7 +104,7 @@ padding:10px;
 `
 
 export const TextInter700 = styled.h2`
-font-family: 'Inter';
+font-family: var(--font-inter);
 font-style: normal;
 font-weight: 700;
 font-size: 36px;
@@ -128,7 +128,7 @@ color: #9890E3;
 `
 
 export const ContactTitle = styled.h1`
-font-family: 'Roboto';
+font-family: var(--font-roboto);
 font-style: italic;
 font-weight: 600;
 font-size: 64px;
@@ -139,7 +139,7 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 `
 
 export const BrandCardTitle = styled.h2 `
-font-family: 'Roboto';
+font-family: var(--font-roboto);
 font-style: normal;
 font-weight: 600;
 font-size: 48px;
@@ -149,7 +149,7 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 margin: 60px 0;
 `
 export const BrandCardContent = styled.p`
-font-family: 'Roboto';
+font-family: var(--font-roboto);
 font-style: normal;
 font-weight: 500;
 font-size: 30px;
@@ -160,7 +160,7 @@ text-align: justify;
 color: #FFFFFF;
 `
 export const BrandCardList = styled.li `
-font-family: 'Roboto';
+font-family: var(--font-roboto);
 font-style: normal;
 font-weight: 500;
 font-size: 30px;

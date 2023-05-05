@@ -62,7 +62,7 @@ z-index:5;
 `
 
 export const Hover = styled.div`
-font-family: 'Roboto';
+font-family: var(--font-roboto);
 font-style: normal;
 font-weight: 500;
 font-size: 24px;

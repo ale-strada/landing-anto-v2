@@ -34,7 +34,7 @@ align-items: center;
 justify-content: space-around;
 `
 const Derechos = styled.p`
-font-family: 'Roboto';
+font-family: var(--font-roboto);
 font-style: normal;
 font-weight: 300;
 font-size: 11px;

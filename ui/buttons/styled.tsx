@@ -12,7 +12,7 @@ background: rgba(150, 146, 215, 1);
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 14px;
 border: none;
-font-family: 'Inter';
+font-family: var(--font-inter);
 font-style: normal;
 font-weight: 700;
 font-size: 14px;
