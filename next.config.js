@@ -6,6 +6,9 @@ const nextConfig = withSvgr({
   compiler: {
     styledComponents: true,
   },
+  experimental: {
+    appDir: false,
+  },
 });
 
 module.exports = nextConfig;
