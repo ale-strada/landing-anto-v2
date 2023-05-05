@@ -1,10 +1,9 @@
 import { BrandCard } from "@/components/brand-card";
-import { Footer } from "@/components/footer";
-import { Header } from "@/components/header";
 import { Layout } from "@/components/layout";
 import { TextRoboto500, TextRoboto700 } from "@/ui/text";
 import Image from 'next/image'
 import styled from "styled-components";
+
 
 const HeroContainer = styled.div`
 display: flex;
