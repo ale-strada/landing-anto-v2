@@ -1,20 +1,24 @@
-import ContactForm from "@/components/contact-form";
-import { Footer } from "@/components/footer";
-import { Header } from "@/components/header";
 import { ContactTitle, TextRoboto500Gris } from "@/ui/text";
 import Head from "next/head";
 import React from "react";
 import Image from 'next/image'
 import picture from "../../public/contacto-img.png"
-import { Layout } from "@/components/layout";
+import dynamic from "next/dynamic";
 
+const DynamicLayout = dynamic(() =>
+  import('@/components/layout').then((mod) => mod.Layout),{ssr:false}
+);
+
+const DynamicContactForm = dynamic(() =>
+  import('@/components/contact-form').then((mod) => mod.ContactForm),{ssr:false}
+);
 
 export default function  ContactPage(){
     return <>
     <Head>
         <title>Contacto</title>
     </Head>
-    <Layout>
+    <DynamicLayout>
         <ContactTitle style={{
             marginTop: "195px"
         }}
@@ -22,8 +26,8 @@ export default function  ContactPage(){
         <React.Fragment>
             <TextRoboto500Gris>Para poder cotizar y agendar tu proyecto, debes rellenar este formulario con el mayor detalle posible. Si cuento con disponibilidad y tu proyecto es un buen match, me estaré poniendo en contacto contigo dentro de las 72h hábiles de haber enviado el formulario.</TextRoboto500Gris>
         </React.Fragment>   
-        <ContactForm/>
+        <DynamicContactForm/>
         <Image className="form-img" src={picture} alt="" /> 
-    </Layout>
+    </DynamicLayout>
     </>
 };

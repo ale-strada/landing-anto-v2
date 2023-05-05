@@ -1,10 +1,14 @@
-import { BrandCard } from "@/components/brand-card";
-import { Layout } from "@/components/layout";
 import { TextRoboto500, TextRoboto700 } from "@/ui/text";
 import Image from 'next/image'
 import styled from "styled-components";
+import dynamic from "next/dynamic";
 
-
+const DynamicLayout = dynamic(() =>
+  import('@/components/layout').then((mod) => mod.Layout),{ssr:false}
+);
+const DynamicBrandCard = dynamic(() =>
+  import('@/components/brand-card').then((mod) => mod.BrandCard),{ssr:false}
+);
 const HeroContainer = styled.div`
 display: flex;
 align-items: center;
@@ -30,7 +34,6 @@ position: relative;
 bottom: 600px;
 `
 const TagsContainer = styled.div`
-/* width: 990px; */
 height:0px;
 position: relative;
 bottom: 968px;
@@ -38,7 +41,7 @@ left: 743px;
 z-index:0;
 `
 export default function Brand(){
-    return <Layout>
+    return <DynamicLayout>
     <HeroContainer>
     <Image src={"/brand-hero.png"} alt={""} width={1440} height={1370}/>
     <BrandHero>
@@ -50,7 +53,7 @@ export default function Brand(){
     </HeroContainer>
     <CardsContainer>
         <div style={{borderBottom:"solid 1px #878282", width:"100%"}}>
-        <BrandCard title="BRANDING" 
+        <DynamicBrandCard title="BRANDING" 
         content="Cada marca tiene una identidad, personalidad, valores, atributos y características. Desarrollemos el branding de tu marca usando diseños estratégicos para conectar con tu público, logrando una identidad de marca consistente, única y completa."
         list={["Estudio y dirección visual",
                 " Concepto de identidad visual",
@@ -65,7 +68,7 @@ export default function Brand(){
         />
         </div>
         <div style={{borderBottom:"solid 1px #878282", width:"100%"}}>
-        <BrandCard title="BRANDING & SOCIAL MEDIA" 
+        <DynamicBrandCard title="BRANDING & SOCIAL MEDIA" 
         content="Este paquete es perfetcto para tener la identidad completa dentro de una de las redes sociales más importantes del momento: Instagram."
         list={["Estudio y dirección visual",
             "Concepto de identidad visual",
@@ -83,7 +86,7 @@ export default function Brand(){
         />
         </div>
         <div style={{borderBottom:"solid 1px #878282", width:"100%"}}>
-        <BrandCard title="BRANDING & PACKAGING" 
+        <DynamicBrandCard title="BRANDING & PACKAGING" 
         content="Trabajaremos en el diseño de tus empaques para causar impacto y una mejor experiencia en tu consumidor, combinando lo visual con lo funcional."
         list={[
             " Diseño de cajas para envío",
@@ -101,5 +104,5 @@ export default function Brand(){
     <TagsContainer>
         <img src="/tags.png" alt="" />
     </TagsContainer>
-    </Layout>
+    </DynamicLayout>
 }

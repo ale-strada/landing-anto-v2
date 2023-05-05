@@ -7,7 +7,7 @@ import { CheckboxList } from '../checkbox-list';
 
 
 
-export default function ContactForm() {
+export  function ContactForm() {
     const tamaño = useRecoilValue(tamañoState)
     const [servicios, setServicios] = useRecoilState(serviciosState)
 
