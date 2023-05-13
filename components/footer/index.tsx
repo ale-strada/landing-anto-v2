@@ -59,7 +59,7 @@ export function Footer(){
         <div>
             <InfoContainer><Phone style={{marginRight:"10px"}}/><TextRoboto500 style={{fontSize:"16px", marginBottom:"0"}}>+549 3512 401811</TextRoboto500></InfoContainer>
             <InfoContainer><Mail style={{marginRight:"10px"}}/><TextRoboto500 style={{fontSize:"16px", marginBottom:"0"}}>hello.antonelladesign@gmail.com</TextRoboto500></InfoContainer>
-            <InfoContainer><Address style={{marginRight:"10px"}}/><TextRoboto500 style={{fontSize:"16px", marginBottom:"0"}}>De Córdoba - Argentina para el mundo.</TextRoboto500></InfoContainer>
+            <InfoContainer><Address style={{marginRight:"10px"}}/><TextRoboto500 style={{fontSize:"16px", marginBottom:"0",  width:"100%"}}>De Córdoba - Argentina para el mundo.</TextRoboto500></InfoContainer>
         </div>
         <RedesContainer>
             <LineContainer/>

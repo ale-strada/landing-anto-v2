@@ -1,7 +1,7 @@
 import { Turn as Hamburger } from 'hamburger-react'
 import router from "next/router";
 import { useState } from "react";
-import { BurgerWrap, ButtonToContactHeader, DesktopWrap, HeaderConteiner, Hover, MobileWrap, NavMenu, TabletWrap, UlNav } from "./styled";
+import { BurgerWrap, ButtonToContactHeader, DesktopWrap, HeaderConteiner, MobileWrap, NavMenu, TabletWrap, UlNav } from "./styled";
 import dynamic from 'next/dynamic'
 
 export function Header(){
@@ -47,6 +47,9 @@ export function Header(){
     const DynamicLogoTablet = dynamic(() =>
       import('@/public/img').then((mod) => mod.LogoTablet),{ssr:false}
     );
+    const DynamicHover = dynamic(() =>
+      import('./styled').then((mod) => mod.Hover),{ssr:false}
+    );
     return<HeaderConteiner>
         <MobileWrap style={{cursor:"pointer"}} onClick={handleClickLogo}>
             <DynamicLogoReducidoAnto />
@@ -62,12 +65,12 @@ export function Header(){
         </BurgerWrap>
         <NavMenu style={isOpen?{display:"flex"}:{}}>
             <UlNav>
-                <Hover style={{cursor:"pointer"}} onClick={handleClickScrollAbout}>Home</Hover>
-                <Hover style={{cursor:"pointer"}} onClick={handleClickScrollServicios}>Servicios</Hover>
-                <Hover style={{cursor:"pointer"}} onClick={handleClickScrollFaqs}>FAQS</Hover>
-                <Hover style={{cursor:"pointer"}} onClick={handleClickScrollPortafolio}>Portafolio</Hover>
+                <DynamicHover style={{cursor:"pointer"}} onClick={handleClickScrollAbout}>Home</DynamicHover>
+                <DynamicHover style={{cursor:"pointer"}} onClick={handleClickScrollServicios}>Servicios</DynamicHover>
+                <DynamicHover style={{cursor:"pointer"}} onClick={handleClickScrollFaqs}>FAQS</DynamicHover>
+                <DynamicHover style={{cursor:"pointer"}} onClick={handleClickScrollPortafolio}>Portafolio</DynamicHover>
                 <ButtonToContactHeader onClick={handleClickScrollContacto}>
-                    <Hover style={{fontSize:"24px"}}>Contactar</Hover> 
+                    <DynamicHover style={{fontSize:"24px"}}>Contactar</DynamicHover> 
                 </ButtonToContactHeader>
             </UlNav>
         </NavMenu>

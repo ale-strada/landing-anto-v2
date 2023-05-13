@@ -1,7 +1,9 @@
 import { atom } from "recoil";
 
+const url = process.env.BASE_URL;
+
 export async function sendApi(mensaje: any) {
-  return fetch("http://localhost:3000/api/send", {
+  return fetch("/api/send", {
     method: "POST",
     body: JSON.stringify(mensaje),
   });
