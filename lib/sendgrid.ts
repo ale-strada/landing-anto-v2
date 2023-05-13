@@ -14,13 +14,19 @@ export async function sendEmail(mensaje: any) {
 }
 
 async function sendEmailLib(mensaje: any) {
-  sgMail
-    .send(mensaje)
-    .then(() => {
-      console.log("Email sent");
-      return { m: "ok" };
-    })
-    .catch((error) => {
-      console.error(error);
-    });
+  try {
+    await sgMail.send(mensaje);
+    console.log("Email sent");
+  } catch (error) {
+    console.log(error);
+  }
+  // sgMail
+  //   .send(mensaje)
+  //   .then(() => {
+  //     console.log("Email sent");
+  //     return { m: "ok" };
+  //   })
+  //   .catch((error) => {
+  //     console.error(error);
+  //   });
 }

@@ -6,10 +6,9 @@ import { sendEmail } from "@/lib/sendgrid";
 async function handlerMessage(req: NextApiRequest, res: NextApiResponse) {
   try {
     console.log(req.body, "email");
-    const email = await sendEmail(req.body).then(() => {
-      console.log("mensaje enviado endpoint");
-    });
-    res.send({ m: "ok" });
+    const email = await sendEmail(req.body);
+    console.log("mensaje enviado endpoint");
+    res.send(email);
   } catch (error) {
     res.status(400).send(error);
   }
