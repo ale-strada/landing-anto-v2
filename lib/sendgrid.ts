@@ -10,6 +10,7 @@ export async function sendEmail(mensaje: any) {
   };
   //prueba
   await sendEmailLib(msg);
+  return { m: "ok" };
 }
 
 async function sendEmailLib(mensaje: any) {
@@ -17,6 +18,7 @@ async function sendEmailLib(mensaje: any) {
     .send(mensaje)
     .then(() => {
       console.log("Email sent");
+      return { m: "ok" };
     })
     .catch((error) => {
       console.error(error);
