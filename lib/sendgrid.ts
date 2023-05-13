@@ -20,13 +20,4 @@ async function sendEmailLib(mensaje: any) {
   } catch (error) {
     console.log(error);
   }
-  // sgMail
-  //   .send(mensaje)
-  //   .then(() => {
-  //     console.log("Email sent");
-  //     return { m: "ok" };
-  //   })
-  //   .catch((error) => {
-  //     console.error(error);
-  //   });
 }
