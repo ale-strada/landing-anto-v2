@@ -18,6 +18,7 @@ export  function ContactForm() {
             EMAIL:e.target.email.value,
             PAIS: e.target.pais.value,
             TAMAÑO:tamaño,
+            NEGOCIO:e.target.negocio.value,
             LINK: e.target.link.value,
             RUBRO:e.target.rubro.value,
             SERVICIOS_REQUERIDOS:servicios,
@@ -68,13 +69,16 @@ return (
             <input className='input-form' type="text" name="pais" />
         </label>
         <CheckboxList onChange={true} label="¿Cuál de las siguientes opciones te identifica?" checkbox={["Soy emprendedor / Trabajador independiente","Negocio pequeño","Compañía grande", "Organización sin fines de lucro"]}/>
+        <label className='label-form'><TextInter600Lila style={{marginBottom: "5px"}}>Nombre de tu negocio</TextInter600Lila>
+            <input className='input-form' type="text" name="negocio" />
+        </label>
         <label className='label-form'><TextInter600Lila style={{marginBottom: "5px"}}>Link de página web/Instagram de tu negocio</TextInter600Lila>
             <input className='input-form' type="text" name="link" placeholder='Si todavía no tienen coloca NA' />
         </label>
         <label className='label-form'><TextInter600Lila style={{marginBottom: "5px"}}>¿Cuál es el giro de tu negocio? ¿A qué se dedican o qué venden?</TextInter600Lila>
             <textarea className='textarea-form' name="rubro" />
         </label>
-        <CheckboxList label="¿Cuál es el servicio de tu interés?" checkbox={["Branding básico", "Branding & Social Media", "Branding & Packaging","GIFS / Stickers", "Contenido"]}/>
+        <CheckboxList label="¿Cuál es el servicio de tu interés?" checkbox={["Branding básico", "Branding & Social Media", "Branding & Packaging","GIFS / Stickers (aclarar en Mensaje adicional el paquete que corresponde)", "Contenido"]}/>
         <label className='label-form'><TextInter600Lila style={{marginBottom: "5px"}}>¿Porqué requieres de mis servicios?</TextInter600Lila>
             <textarea className='textarea-form' name="porque" />
         </label>
