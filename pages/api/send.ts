@@ -5,8 +5,10 @@ import { sendEmail } from "@/lib/sendgrid";
 
 async function handlerMessage(req: NextApiRequest, res: NextApiResponse) {
   try {
-    console.log(req.body, "email");
-    const email = await sendEmail(req.body);
+    const bodyParseado = JSON.parse(req.body);
+    const { mensaje, file, fileName } = bodyParseado;
+
+    const email = await sendEmail(JSON.stringify(mensaje), file, fileName);
     console.log("mensaje enviado endpoint");
     res.send(email);
   } catch (error) {

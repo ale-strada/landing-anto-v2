@@ -1,15 +1,18 @@
-import { sendApi, serviciosState, tamañoState } from '@/lib/hooks';
+import { fileBase64State, fileNameState, sendApi, serviciosState, tamañoState } from '@/lib/hooks';
 import { ContactFormButton } from '@/ui/buttons';
 import { TextInter600Lila } from '@/ui/text';
 import { useRecoilState, useRecoilValue } from 'recoil';
 import Swal from 'sweetalert2'
 import { CheckboxList } from '../checkbox-list';
+import FormFile from '../file-input';
 
 
 
 export  function ContactForm() {
     const tamaño = useRecoilValue(tamañoState)
     const [servicios, setServicios] = useRecoilState(serviciosState)
+    const [fileName, setFileName] = useRecoilState(fileNameState)
+    const [fileBase64, setFileBase64] = useRecoilState(fileBase64State)
 
     function handleSubmit(e:any){
         e.preventDefault()
@@ -35,7 +38,12 @@ export  function ContactForm() {
             contactoMensaje.RUBRO &&
             contactoMensaje.SERVICIOS_REQUERIDOS &&
             contactoMensaje.PRESUPUESTO){
-        sendApi(contactoMensaje)
+            if(fileBase64 && fileName){
+                sendApi(contactoMensaje,fileBase64,fileName)
+            }else{
+                sendApi(contactoMensaje)
+            }
+        
         Swal.fire({
             title: "Su mensaje fue enviado",
             icon: "success",
@@ -88,6 +96,10 @@ return (
         <label className='label-form'><TextInter600Lila style={{marginBottom: "5px"}}>Mensaje adicional</TextInter600Lila>
             <textarea className='textarea-form' name="mensaje" placeholder='Si elegiste Branding & Packaging aquí puedes especificar en detalle los elementos que se requieren' />
         </label>
+        <label className='label-form'><TextInter600Lila style={{marginBottom: "5px"}}>¿Tienes un archivo que me quieras compartir a modo ilustrativo/inspiracional?</TextInter600Lila>
+            <FormFile/>
+        </label>
+
         <div className='button-wrap-form'>
             <ContactFormButton type="submit" text="Enviar"/> 
         </div>
