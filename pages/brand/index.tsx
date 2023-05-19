@@ -27,7 +27,7 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: space-around;
-padding: 60px;
+padding: 35px;
 @media(min-width: 500px){
     width: 590px;
     height: 523px;
@@ -35,6 +35,7 @@ padding: 60px;
 @media(min-width: 1000px){
     width: 956px;
     height: 523px;
+    padding: 60px;
 }
 `
 

@@ -41,7 +41,7 @@ export function BrandCard(props:cardBrandProps){
         <BrandCardTitle>{props.title}</BrandCardTitle>
         <BrandCardContent>{props.content}</BrandCardContent>
         <ListContainer >
-            <BrandCardContent style={{marginBottom:"80px"}}>{props.listDescription? props.listDescription : ""}</BrandCardContent>
+            <BrandCardContent style={{marginBottom:"20px"}}>{props.listDescription? props.listDescription : ""}</BrandCardContent>
             {props.list.map((s:string)=>{
                 return <BrandCardList key={s}>· {" "+s}</BrandCardList>
             })}
