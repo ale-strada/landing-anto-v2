@@ -51,7 +51,12 @@ function FormFile() {
 return (
     <>
     <Form.Group  controlId="formFileSm" className="mb-3">
-        <Form.Control onChange={handleSubmit} type="file" size="sm" />
+        <Form.Control onChange={handleSubmit} type="file" size="sm" style={{
+                marginTop: "10px",
+                background: "rgba(152, 144, 227, 0.09)",
+                border: "1px solid #9890E3",
+                borderRadius: "14px"
+        }} />
     </Form.Group>
     </>
 );
