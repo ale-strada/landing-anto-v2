@@ -4,17 +4,25 @@ import router from "next/router"
 import styled from "styled-components"
 
 const CardContainer = styled.div`
-width: 80%;
+width: 90%;
 /* height: 1330px; */
 background: #BCBCEE;
 margin: 70px auto;
-padding: 60px;
+padding: 20px 15px;
 display: flex;
 flex-direction: column;
+@media(min-width: 850px) {
+width: 80%;
+padding: 60px;
+}
 `
 const ListContainer = styled.ul`
-margin: 60px auto;
+padding-left: 0;
+width: 100%;
+@media(min-width: 850px) {
 width: 60%;
+margin: 60px auto;
+}
 `
 //este es el componente brand card. requiere por props el contenido para mostrar. titulo, descripcion, lista de servicios incluidos.
 

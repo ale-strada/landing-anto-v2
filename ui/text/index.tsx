@@ -11,8 +11,10 @@ color: #FFFFFF;
 @media (min-width: 420px) {
 //font-size:32px;
 }
-@media (min-width: 850px) {
-text-align:center;
+@media (min-width: 1000px) {
+text-align:justify;
+font-size:36px;
+line-height: 42px;
 }
 `
 export const TextRoboto500Gris = styled(TextRoboto500)`
@@ -49,6 +51,10 @@ color: #FFFFFF;
     @media (min-width: 850px) {
     font-size:40px;
     }
+    @media (min-width: 1000px) {
+    font-size:50px;
+    }
+
 `
 
 export const TextRoboto400 = styled.p`
@@ -147,20 +153,26 @@ export const BrandCardContent = styled.p`
 font-family: var(--font-roboto);
 font-style: normal;
 font-weight: 500;
-font-size: 30px;
+font-size: 24px;
 line-height: 149.19%;
 display: flex;
 align-items: center;
 text-align: justify;
 color: #FFFFFF;
+@media(min-width: 850px) {
+font-size:30px;
+}
 `
 export const BrandCardList = styled.li `
 font-family: var(--font-roboto);
 font-style: normal;
 font-weight: 500;
-font-size: 30px;
+font-size: 24px;
 line-height: 149.19%;
 display: flex;
 align-items: center;
 color: #FFFFFF;
+@media(min-width: 850px) {
+font-size:30px;
+}
 `

@@ -37,7 +37,7 @@ export const WrapDesktop = styled.div`
 display: none;
 @media (min-width: 850px) {
     display: initial;
-    max-width:850px;
+    /* max-width:850px; */
     text-align: center;
 }
 `

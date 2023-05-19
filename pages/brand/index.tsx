@@ -16,8 +16,8 @@ justify-content: center;
 flex-direction: column;
 `
 const BrandHero = styled.div`
-width: 956px;
-height: 523px;
+width: 390px;
+height: 500px;
 background: #BCBCEE;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 75px;
@@ -28,7 +28,16 @@ flex-direction: column;
 align-items: center;
 justify-content: space-around;
 padding: 60px;
+@media(min-width: 500px){
+    width: 590px;
+    height: 523px;
+}
+@media(min-width: 1000px){
+    width: 956px;
+    height: 523px;
+}
 `
+
 const CardsContainer = styled.div`
 position: relative;
 bottom: 600px;
@@ -36,18 +45,25 @@ bottom: 600px;
 const TagsContainer = styled.div`
 height:0px;
 position: relative;
-bottom: 968px;
-left: 743px;
+bottom: 900px;
+left: 0px;
 z-index:0;
+@media(min-width: 500px){
+    left:350px
+}
+@media(min-width: 850px){
+    left:743px;
+    bottom:968px
+}
 `
 export default function Brand(){
     return <DynamicLayout>
     <HeroContainer>
     <Image src={"/brand-hero.png"} alt={""} width={1440} height={1370}/>
     <BrandHero>
-        <TextRoboto700 style={{fontSize:"64px", marginBottom:"60px"}}>BRANDING</TextRoboto700>
-        <TextRoboto500 style={{fontSize:"36px", lineHeight: "42px", textAlign:"justify"}}>Cada marca tiene una identidad, personalidad, valores, atributos y características. </TextRoboto500>
-        <TextRoboto500 style={{fontSize:"36px", lineHeight: "42px", textAlign:"justify"}}>
+        <TextRoboto700 >BRANDING</TextRoboto700>
+        <TextRoboto500 >Cada marca tiene una identidad, personalidad, valores, atributos y características. </TextRoboto500>
+        <TextRoboto500 >
         Desarrollemos el branding de tu marca usando diseños estratégicos para conectar con tu público, logrando una identidad de marca consistente, única y completa.</TextRoboto500>
     </BrandHero>
     </HeroContainer>

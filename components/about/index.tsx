@@ -43,13 +43,13 @@ export function About(){
                 <DynamicTextRoboto500 style={{backgroundColor:"#BCBCEE", marginBottom:"0"}}>
                     La tecnología actual abre muchos horizontes de crecimiento, si se saben
                 </DynamicTextRoboto500>
-                <DynamicTextRoboto500 style={{backgroundColor:"#BCBCEE", width: "135px", margin:" 0 auto"}}>
+                <DynamicTextRoboto500 style={{backgroundColor:"#BCBCEE", width: "195px", margin:" 0 auto"}}>
                     aprovechar.
                 </DynamicTextRoboto500>
-                <DynamicTextRoboto500 style={{marginTop:"20px"}}>¡Es el momento de potenciar tu marca!</DynamicTextRoboto500>
+                <DynamicTextRoboto500 style={{marginTop:"20px", textAlign:"center"}}>¡Es el momento de potenciar tu marca!</DynamicTextRoboto500>
             </WrapDesktop>
             <WrapMobile>
-                <DynamicTextRoboto500 >
+                <DynamicTextRoboto500>
                     ¡Es el momento de potenciar tu marca!
                 </DynamicTextRoboto500>
             </WrapMobile>
