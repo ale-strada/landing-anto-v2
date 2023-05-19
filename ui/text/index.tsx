@@ -156,7 +156,7 @@ export const BrandCardContent = styled.p`
 font-family: var(--font-roboto);
 font-style: normal;
 font-weight: 500;
-font-size: 20px;
+font-size: 19px;
 line-height: 149.19%;
 display: flex;
 align-items: center;
@@ -170,7 +170,7 @@ export const BrandCardList = styled.li `
 font-family: var(--font-roboto);
 font-style: normal;
 font-weight: 500;
-font-size: 20px;
+font-size: 19px;
 line-height: 149.19%;
 display: flex;
 align-items: center;

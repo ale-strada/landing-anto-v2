@@ -17,7 +17,7 @@ flex-direction: column;
 `
 const BrandHero = styled.div`
 width: 390px;
-height: 500px;
+height: 400px;
 background: #BCBCEE;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 75px;
