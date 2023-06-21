@@ -113,13 +113,13 @@ export default function Gifs(){
         content2="Para que sean “buscables” en Instagram se deben subir a GIPHY (un buscador de GIFS), *para aplicar a este buscador es necesario que cumplas 2 requisitos: Mail corporativo (por ejemplo contacto@tumarca .com)
         y tener un sitio web"
         list={[
-           "Análisis de marca",
-           "Definición de estilo",
-           "10 diseños de GIFs",
-           "Subida a GIPHY*",
-           "Mini manual de uso",
-           "Utilizables en Whatsapp",
-           "Fondo diseñado con tus GIFs",
+            "Análisis de marca",
+            "Definición de estilo",
+            "10 diseños de GIFs",
+            "Subida a GIPHY*",
+            "Mini manual de uso",
+            "Utilizables en Whatsapp",
+            "Fondo diseñado con tus GIFs",
         ]}
         buttonText="Quiero este paquete"
         />

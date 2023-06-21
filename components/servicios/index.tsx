@@ -20,6 +20,10 @@ export function Servicios(){
         router.push("/gifs")
         return true
     }
+    function handleContenido (){
+        router.push("/contenido")
+        return true
+    }
 
     return <div id="servicios">
         <ServiciosConteiner>
@@ -39,7 +43,7 @@ export function Servicios(){
                 <CollapseCard paquete={true}  onClick = {handleGifs} contenido="La integración de este tipo de contenidos en canales como Instagram, impactan en la memoria de tu público, haciendo que tu marca sea más memorable." buttonText="GIFS y Stickers"/>
             </CardResponsiveWrap>
             <CardResponsiveWrap>
-                <CollapseCard style={{borderBottom: "1px solid #C9C8C8", paddingBottom:"20px"}} contenido="Este servicio es el indicado para vos que ya tenés un diseño de marca, pero que buscás un empujón a la hora de crear contenido. Pensar qué subir a redes y de qué forma hacerlo puede ser agobiante. Pero acá estoy para darte una mano." buttonText="Contenido"/>
+                <CollapseCard paquete={true}  onClick = {handleContenido} style={{borderBottom: "1px solid #C9C8C8", paddingBottom:"20px"}} contenido="Este servicio es el indicado para vos que ya tenés un diseño de marca, pero que buscás un empujón a la hora de crear contenido. Pensar qué subir a redes y de qué forma hacerlo puede ser agobiante. Pero acá estoy para darte una mano." buttonText="Contenido"/>
             </CardResponsiveWrap>
             </ScrollBarDiv>  
             <FondoChuno>
