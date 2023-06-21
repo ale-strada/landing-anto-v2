@@ -62,7 +62,7 @@ export default function Brand(){
     <HeroContainer>
     <Image src={"/brand-hero.png"} alt={""} width={1440} height={1370}/>
     <BrandHero>
-        <TextRoboto700 >BRANDING</TextRoboto700>
+        <TextRoboto700 style={{textShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)"}} >BRANDING</TextRoboto700>
         <TextRoboto500 >Cada marca tiene una identidad, personalidad, valores, atributos y características. </TextRoboto500>
         <TextRoboto500 >
         Desarrollemos el branding de tu marca usando diseños estratégicos para conectar con tu público, logrando una identidad de marca consistente, única y completa.</TextRoboto500>
@@ -82,6 +82,7 @@ export default function Brand(){
                 "Paleta de colores",
                 "Tipografía",
         ]}
+        buttonText="Cotizar este paquete"
         />
         </div>
         <div style={{borderBottom:"solid 1px #878282", width:"100%"}}>
@@ -100,6 +101,7 @@ export default function Brand(){
             "6 plantillas editables",
             "4 portadas destacadas",
         ]}
+        buttonText="Cotizar este paquete"
         />
         </div>
         <div style={{borderBottom:"solid 1px #878282", width:"100%"}}>
@@ -115,6 +117,7 @@ export default function Brand(){
             "Tarjeta de presentación",
         ]}
         listDescription="Paquete de Branding base + elementos de packaging que requieras:"
+        buttonText="Cotizar este paquete"
         />
         </div>
     </CardsContainer>

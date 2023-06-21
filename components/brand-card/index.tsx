@@ -29,17 +29,21 @@ margin: 60px auto;
 type cardBrandProps = {
     title:string,
     content:string,
+    content2?:string,
     list:string[],
     listDescription?:string,
+    conteinerStyle?:any,
+    buttonText:string
 }
 export function BrandCard(props:cardBrandProps){
     function handleClick(){
         router.push("/contact")
     }
     return<>
-    <CardContainer>
+    <CardContainer style={props.conteinerStyle}>
         <BrandCardTitle>{props.title}</BrandCardTitle>
         <BrandCardContent>{props.content}</BrandCardContent>
+        <BrandCardContent>{props.content2}</BrandCardContent>
         <ListContainer >
             <BrandCardContent style={{marginBottom:"20px"}}>{props.listDescription? props.listDescription : ""}</BrandCardContent>
             {props.list.map((s:string)=>{
@@ -55,7 +59,7 @@ export function BrandCard(props:cardBrandProps){
             alignSelf: "end",
             zIndex:"5",
         }}>
-            <TextInter600Lila style={{margin:"0"}}>Cotizar este paquete</TextInter600Lila>
+            <TextInter600Lila style={{margin:"0"}}>{props.buttonText}</TextInter600Lila>
         </ButtonToContact>
     </CardContainer>
     </>
