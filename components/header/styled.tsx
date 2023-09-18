@@ -69,7 +69,7 @@ font-size: 24px;
 line-height: 28px;
 text-align: justify;
 color: #FFFFFF;
-:hover{
+&:hover{
     color:#9692D7
 }
 `

@@ -18,7 +18,7 @@ font-weight: 700;
 font-size: 14px;
 line-height: 15px;
 color: #FFFFFF;
-:hover{
+&:hover{
     background: #BCBCEE;
 }
 `
@@ -34,7 +34,7 @@ color: #9890E3;
 @media (min-width: 500px) {
     width:362px;
 }
-:hover{
+&:hover{
     border-radius: 14px;
     border: 1px solid #9890E3;
     background: rgba(152, 144, 227, 0.53) !important;
@@ -62,7 +62,7 @@ height: 30px;
     height: 43px;
     margin-top:50px;
 }
-:hover{
+&:hover{
     border-radius: 14px;
     border: 3px solid #878282;
     background: #E8E6E6;
