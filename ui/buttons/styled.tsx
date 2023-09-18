@@ -18,6 +18,9 @@ font-weight: 700;
 font-size: 14px;
 line-height: 15px;
 color: #FFFFFF;
+:hover{
+    background: #BCBCEE;
+}
 `
 
 export const Button = styled.button`
@@ -27,8 +30,15 @@ border: 3px solid #9890E3;
 border-radius: 14px;
 background:none;
 box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
+color: #9890E3;
 @media (min-width: 500px) {
     width:362px;
+}
+:hover{
+    border-radius: 14px;
+    border: 1px solid #9890E3;
+    background: rgba(152, 144, 227, 0.53) !important;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 `
 export const ButtonPaquetes = styled.button`
@@ -51,5 +61,11 @@ height: 30px;
     width: 254px;
     height: 43px;
     margin-top:50px;
+}
+:hover{
+    border-radius: 14px;
+    border: 3px solid #878282;
+    background: #E8E6E6;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 `

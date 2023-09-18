@@ -1,6 +1,7 @@
 import { ButtonToContact } from "@/ui/buttons"
 import { BrandCardContent, BrandCardList, BrandCardTitle, TextInter600Lila } from "@/ui/text"
 import router from "next/router"
+import { useState } from "react"
 import styled from "styled-components"
 
 const CardContainer = styled.div`
@@ -36,9 +37,23 @@ type cardBrandProps = {
     buttonText:string
 }
 export function BrandCard(props:cardBrandProps){
+    const [isHovered, setIsHovered] = useState(false);
+
+    const handleHover = () => {
+        setIsHovered(true);
+    };
+
+    const handleMouseLeave = () => {
+        setIsHovered(false);
+    };
     function handleClick(){
         router.push("/contact")
     }
+
+    const style = {
+        margin: '0',
+        ...(isHovered && { color: '#FFF' }),
+        };
     return<>
     <CardContainer style={props.conteinerStyle}>
         <BrandCardTitle>{props.title}</BrandCardTitle>
@@ -50,7 +65,11 @@ export function BrandCard(props:cardBrandProps){
                 return <BrandCardList key={s}>· {" "+s}</BrandCardList>
             })}
         </ListContainer>
-        <ButtonToContact onClick={handleClick} style={{
+        <ButtonToContact 
+            onClick={handleClick}
+            onMouseEnter={handleHover}
+            onMouseLeave={handleMouseLeave}
+            style={{
             background: "white",
             width: "233px",
             display: "flex",
@@ -59,7 +78,11 @@ export function BrandCard(props:cardBrandProps){
             alignSelf: "end",
             zIndex:"5",
         }}>
-            <TextInter600Lila style={{margin:"0"}}>{props.buttonText}</TextInter600Lila>
+            <TextInter600Lila 
+                style={style}
+                >
+                    {props.buttonText}
+            </TextInter600Lila>
         </ButtonToContact>
     </CardContainer>
     </>

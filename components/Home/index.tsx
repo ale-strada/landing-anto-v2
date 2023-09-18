@@ -3,6 +3,7 @@ import { Arrow } from '@/public/img'
 import { TextInter700 } from '@/ui/text'
 import router from "next/router";
 import dynamic from 'next/dynamic'
+import { useState } from 'react';
 
 
 const ContactoContainer = styled.div`
@@ -41,6 +42,25 @@ const DynamicButtonToContact = dynamic(() =>
 );
 
 export function HomePage(){
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleHover = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
+    const style = {
+      color:" #9890E3", fontSize:"16px", margin:"0px",
+        ...(isHovered && { color: '#FFF' }),
+      };
+    const styleArrow = {
+      marginLeft:"10px",
+      strokeColor:" #9890E3",
+        ...(isHovered && { strokeColor: '#FFF' }),
+    }
     return <DynamicLayout>
                 <DynamicAbout/>
                 <DynamicServicios/>
@@ -48,10 +68,14 @@ export function HomePage(){
                 <DynamicFaqs/>
                 <ContactoContainer>
                     <DynamicCartel/>
-                    <DynamicButtonToContact onClick={()=> {router.push("/contact")}} style={{alignSelf:"end"}}>
+                    <DynamicButtonToContact 
+                      onClick={()=> {router.push("/contact")}} 
+                      style={{alignSelf:"end"}} 
+                      onMouseEnter={handleHover}
+                      onMouseLeave={handleMouseLeave}>
                         <div style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
-                            <TextInter700 style={{color:" #9890E3", fontSize:"16px", margin:"0px"}}>Comenzar un proyecto juntos </TextInter700> 
-                            <Arrow style={{marginLeft:"10px"}}/>
+                            <TextInter700 style={style}>Comenzar un proyecto juntos </TextInter700> 
+                            <Arrow style={styleArrow} strokeColor={styleArrow.strokeColor}/>
                         </div>
                     </DynamicButtonToContact>
                 </ContactoContainer>

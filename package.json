@@ -2,14 +2,13 @@
   "name": "landing-v2",
   "version": "0.1.0",
   "private": true,
-   "scripts": {
+  "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
-    "@next/font": "^13.4.0",
     "@sendgrid/mail": "^7.7.0",
     "@types/node": "18.11.18",
     "@types/react": "18.0.27",

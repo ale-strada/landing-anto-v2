@@ -16,5 +16,11 @@ export function ContactFormButton(props:any){
 }
 
 export function ButtonToContact(props:any){
-    return <Button onClick={props.onClick} style={props.style}>{props.children}</Button>
+    return <Button 
+        onClick={props.onClick} 
+        style={props.style} 
+        onMouseEnter={props.onMouseEnter} 
+        onMouseLeave={props.onMouseLeave}>
+            {props.children}
+        </Button>
 }

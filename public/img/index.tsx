@@ -27,7 +27,7 @@ import Vir from "./vir.svg"
 import Faqs from "./Frame.svg"
 import LogoBig from "./logo-amplio.svg"
 import Foto from "./Foto-about.svg"
-import Flecha from "./arrowToContact.svg"
+import Flecha from "./arrowToContact"
 import TabletLogo from "./Logo-grande.svg"
 
 export function LogoReducidoAnto(){
@@ -152,7 +152,7 @@ export function LogoDesk(){
 }
 export function Arrow(props:any){
     return <div style={props.style}>
-            <Flecha/>
+            <Flecha strokeColor={props.strokeColor}/>
     </div>
 }
 export function LogoTablet(){
