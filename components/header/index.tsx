@@ -65,13 +65,13 @@ export function Header(){
         </BurgerWrap>
         <NavMenu style={isOpen?{display:"flex"}:{}}>
             <UlNav>
-                <DynamicHover style={{cursor:"pointer"}} onClick={handleClickScrollAbout}>Home</DynamicHover>
+                {/* <DynamicHover style={{cursor:"pointer"}} onClick={handleClickScrollAbout}>Home</DynamicHover>
                 <DynamicHover style={{cursor:"pointer"}} onClick={handleClickScrollServicios}>Servicios</DynamicHover>
                 <DynamicHover style={{cursor:"pointer"}} onClick={handleClickScrollFaqs}>FAQS</DynamicHover>
-                <DynamicHover style={{cursor:"pointer"}} onClick={handleClickScrollPortafolio}>Portafolio</DynamicHover>
-                <ButtonToContactHeader onClick={handleClickScrollContacto}>
+                <DynamicHover style={{cursor:"pointer"}} onClick={handleClickScrollPortafolio}>Portafolio</DynamicHover> */}
+                {/* <ButtonToContactHeader  onClick={handleClickScrollContacto}>
                     <DynamicHover style={{fontSize:"24px"}}>Contactar</DynamicHover> 
-                </ButtonToContactHeader>
+                </ButtonToContactHeader> */}
             </UlNav>
         </NavMenu>
 

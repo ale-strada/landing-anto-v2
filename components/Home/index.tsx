@@ -61,14 +61,25 @@ export function HomePage(){
       strokeColor:" #9890E3",
         ...(isHovered && { strokeColor: '#FFF' }),
     }
+
+    const Message = styled.h1`
+    font-family: var(--font-inter);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 44px;
+    text-align: center;
+    margin: auto;
+    `
     return <DynamicLayout>
-                <DynamicAbout/>
+                {/* <DynamicAbout/>
                 <DynamicServicios/>
                 <DynamicObjetivo/>
-                <DynamicFaqs/>
+                <DynamicFaqs/> */}
                 <ContactoContainer>
-                    <DynamicCartel/>
-                    <DynamicButtonToContact 
+                  <Message> WEB EN REMODELACION</Message>
+                    {/* <DynamicCartel/> */}
+                    {/* <DynamicButtonToContact 
                       onClick={()=> {router.push("/contact")}} 
                       style={{alignSelf:"end"}} 
                       onMouseEnter={handleHover}
@@ -77,7 +88,7 @@ export function HomePage(){
                             <TextInter700 style={style}>Comenzar un proyecto juntos </TextInter700> 
                             <Arrow style={styleArrow} strokeColor={styleArrow.strokeColor}/>
                         </div>
-                    </DynamicButtonToContact>
+                    </DynamicButtonToContact> */}
                 </ContactoContainer>
     </DynamicLayout>
 }
