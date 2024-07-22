@@ -1,5 +1,11 @@
-import { Address, Behance, LinkedIn, Mail, Phone, WhatsApp } from "@/public/img"
-import { TextRoboto500 } from "@/ui/text"
+import { Address,
+        // Behance,
+        // LinkedIn,
+        Mail,
+        // Phone,
+        // WhatsApp
+        } from "@/public/img"
+import { TextPoppins500 } from "@/ui/text"
 import styled from "styled-components"
 
 const FooterContainer = styled.div`
@@ -9,6 +15,15 @@ padding:40px 0;
 position: relative;
 z-index: 5;
 bottom: 0;
+
+@media (min-width: 850px) {
+    background:#606060;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: flex-end;
+    padding: 40px 20px;
+}
 `
 const InfoContainer = styled.div`
 display: flex;
@@ -18,50 +33,57 @@ width: 315px;
 margin: 5px 20px;
 @media (min-width: 850px) {
 margin-left:100px;
+width: fit-content;
+margin: 0 20px;
 }
 `
-const RedesContainer = styled.div`
-display: flex;
-align-items: center;
-justify-content: space-between;
-margin:20px 0;
-`
-const LogosContainer= styled.div`
-display: flex;
-width: 40%;
-max-width:200px;
-align-items: center;
-justify-content: space-around;
-`
+// const RedesContainer = styled.div`
+// display: flex;
+// align-items: center;
+// justify-content: space-between;
+// margin:20px 0;
+// `
+// const LogosContainer= styled.div`
+// display: flex;
+// width: 40%;
+// max-width:200px;
+// align-items: center;
+// justify-content: space-around;
+// `
 const Derechos = styled.p`
-font-family: var(--font-roboto);
+font-family: var(--font-poppins);
 font-style: normal;
 font-weight: 300;
 font-size: 11px;
 line-height: 13px;
 color: #FFFFFF;
 margin: 10px;
-`
-const LineContainer= styled.div`
-border: solid 2px #FFFF;
-width:85px;
-@media (min-width: 420px) {
-    width:295px;
-    }
 @media (min-width: 850px) {
-width:598px;
+    height: fit-content;
+    align-self: flex-end;
 }
 `
+// const LineContainer= styled.div`
+// border: solid 2px #FFFF;
+// width:85px;
+// @media (min-width: 420px) {
+//     width:295px;
+//     }
+// @media (min-width: 850px) {
+// width:598px;
+// }
+// `
 
 export function Footer(){
 
     return <FooterContainer>
-        <div>
-            <InfoContainer><Phone style={{marginRight:"10px"}}/><TextRoboto500 style={{fontSize:"16px", marginBottom:"0"}}>+549 3512 401811</TextRoboto500></InfoContainer>
-            <InfoContainer><Mail style={{marginRight:"10px"}}/><TextRoboto500 style={{fontSize:"16px", marginBottom:"0"}}>hello.antonelladesign@gmail.com</TextRoboto500></InfoContainer>
-            <InfoContainer><Address style={{marginRight:"10px"}}/><TextRoboto500 style={{fontSize:"16px", marginBottom:"0",  width:"100%"}}>De Córdoba - Argentina para el mundo.</TextRoboto500></InfoContainer>
+        <div style={{alignSelf:"flex-end", height:"fit-content" }}>
+            {/* <InfoContainer><Phone style={{marginRight:"10px"}}/><TextRoboto500 style={{fontSize:"16px", marginBottom:"0"}}>+549 3512 401811</TextRoboto500></InfoContainer> */}
+            <InfoContainer onClick={() => window.open("mailto:hello.antonelladesign@gmail.com")} style={{cursor:"pointer"}}><Mail style={{marginRight:"10px"}}/><TextPoppins500 style={{fontSize:"16px", marginBottom:"0"}}>hello.antonelladesign@gmail.com</TextPoppins500></InfoContainer>
+            <InfoContainer><Address style={{marginRight:"10px"}}/><TextPoppins500 style={{fontSize:"16px", marginBottom:"0",  width:"100%"}}>De Córdoba - Argentina para el mundo.</TextPoppins500></InfoContainer>
         </div>
-        <RedesContainer>
+        <Derechos>Copyright©2024 | Todos los derechos reservados</Derechos>
+        {/* <RedesContainer>
             <LineContainer/>
             <LogosContainer>
                     <a style={{cursor:"pointer"}} aria-label="acceso a linkedin" href="https://www.linkedin.com/in/antonella-jaime-baa707201/"><LinkedIn /></a>
@@ -69,7 +91,6 @@ export function Footer(){
                     <a style={{cursor:"pointer"}} aria-label="acceso a behance" href="https://www.behance.net/antonellajaime"><Behance/></a>
             </LogosContainer>
             <LineContainer/>
-        </RedesContainer>
-        <Derechos>Copyright©2023 | Todos los derechos reservados</Derechos>
+        </RedesContainer> */}
     </FooterContainer>
 }

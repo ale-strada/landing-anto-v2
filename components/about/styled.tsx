@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled,  { keyframes } from "styled-components";
 
 export const AboutTextConteiner = styled.div`
     position: absolute;
@@ -10,16 +10,17 @@ export const AboutTextConteiner = styled.div`
 }
 
 @media (min-width: 850px) {
-    left:0;
-    bottom: 0px;
+    position: initial;
     height:100%;
-    width:100%;
+    /* width:30%; */
+    min-width: 590px;
     text-align: center;
     justify-content:center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgba(187, 187, 236, 0.35);
+    margin: auto;
+    /* background-color: rgba(187, 187, 236, 0.35); */
 }
 `
 export const WrapMobile = styled.div`
@@ -53,7 +54,10 @@ background-color:#BCBCED;
 }
 
 @media (min-width: 850px) {
+margin-top: 100px;
 background:none;
+display: flex;
+flex-direction: row-reverse;
 }
 `
 export const FotoWrapMovile = styled.div`
@@ -71,6 +75,15 @@ export const FotoWrapTablet = styled.div`
     display:none;
 }
 `
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
 export const FotoWrapDesktop = styled.div`
     display:none;
     width:100%;
@@ -80,5 +93,22 @@ export const FotoWrapDesktop = styled.div`
 }
 @media (min-width: 850px) {
     display:flex;
+    width: fit-content;
+    animation: ${fadeIn} 1s ease-in-out; /* Aplica la animación */
 }
+`
+
+
+export const AboutDesignSquare = styled.div`
+    display:none;
+    @media (min-width: 850px) {
+        position: absolute;
+        display:initial;
+        width: 860px;
+        height: 815px;
+        background-color: rgba(187, 187, 236, 0.35);
+        right: 60px;
+        top: 70px;
+        animation: ${fadeIn} 1s ease-in-out; /* Aplica la animación */
+    }
 `

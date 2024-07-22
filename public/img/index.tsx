@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react';
 import LogoReducido from "./logo-reducido.svg"
 import FotoLila from "./fotolilaabaut.svg"
 import FotoAboutGrisMovile from "./fotoabout.svg"
@@ -7,6 +8,7 @@ import RedesLogo from "./logo-wechat.svg"
 import Closed from "./arrowClosed.svg"
 import Open from "./arrowOpen.svg"
 import WhiteCheck from "./check-blanco.svg"
+import GreyCkeck from "./check-gris.svg"
 import Telefono from "./Icono-telefono.svg"
 import Sobre from "./icono-sobre.svg"
 import Direccion from "./icono-direccion.svg"
@@ -25,15 +27,20 @@ import Carcajada from "./carcajada.svg"
 import Beltran from "./Beltran.svg"
 import Vir from "./vir.svg"
 import Faqs from "./Frame.svg"
-import LogoBig from "./logo-amplio.svg"
-import Foto from "./Foto-about.svg"
+import LogoBig from "./logo-amplio-lila.svg"
+import Foto from "./foto-about-black&white.svg"
 import Flecha from "./arrowToContact"
 import TabletLogo from "./Logo-grande.svg"
+import LogoWhite from "./logo-reducido-white.svg"
+import NotebookObjetivo from "./img-notebook-objetivos.svg"
+
+
 
 export function LogoReducidoAnto(){
     return <LogoReducido/>
 }
 
+// foto de portada tamaño desktop
 export function FotoAbout(){
     return <Foto/>
 }
@@ -89,8 +96,22 @@ export function OpenArrow(){
     </div>
     
 }
-export function Check(){
-    return <WhiteCheck/>
+export function Check(props:any){
+    const [isWideScreen, setIsWideScreen] = useState(window.innerWidth > 420);
+
+useEffect(() => {
+    const handleResize = () => {
+        setIsWideScreen(window.innerWidth > 850);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+}, []);
+
+    if (props.color === "grey" || isWideScreen){
+        return <GreyCkeck style={props.style}/>
+    }
+    return <WhiteCheck style={props.style}/>
 }
 export function Phone(props:any){
     return <Telefono style={props.style}/>
@@ -158,4 +179,13 @@ export function Arrow(props:any){
 export function LogoTablet(){
     return <TabletLogo/>
 }
+
+export function LogoReducidoWhite(props:any){
+    return <LogoWhite style={props.style}/>
+}
+
+export function ImgObjetivo(props:any){
+    return <NotebookObjetivo style={props.style}/>
+}
+
 

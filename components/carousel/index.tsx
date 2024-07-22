@@ -15,9 +15,14 @@ display: flex;
 padding-top: 20px;
 }
 `
+const CarouselConteiner = styled.div`
+@media (min-width: 850px) {
+display: none;
+}
+`
 function CarouselServicios() {
 return (
-<div>
+<CarouselConteiner>
     <ResponsiveWrapCel>
         <Carousel style={{ height: "240px"}}>
             <Carousel.Item>
@@ -38,7 +43,7 @@ return (
         <AnimacionCard/>
         <RedesCard/>
     </ResponsiveWrapTablet>
-</div>
+</CarouselConteiner>
 );
 }
 

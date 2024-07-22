@@ -11,6 +11,7 @@ padding: 60px;
 }
 @media (min-width: 850px) {
 padding: 40px;
+background-color: #E7E7F9;
 }
 `
 export const DescriptionContainer= styled.div`
@@ -35,6 +36,16 @@ margin-top: 60px;
 export const Testimonios = styled.div`
 display: none;
 @media (min-width: 850px) {
+display: flex;
+flex-direction: column;
+width:50%;
+margin: 20px 0 0 0;
+}
+` 
+
+export const TituloConImagen = styled.div`
+display: none;
+@media (min-width: 420px) {
 display: flex;
 flex-direction: column;
 width:50%;

@@ -42,25 +42,25 @@ const DynamicButtonToContact = dynamic(() =>
 );
 
 export function HomePage(){
-  const [isHovered, setIsHovered] = useState(false);
+  // const [isHovered, setIsHovered] = useState(false);
 
-  const handleHover = () => {
-    setIsHovered(true);
-  };
+  // const handleHover = () => {
+  //   setIsHovered(true);
+  // };
 
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-  };
+  // const handleMouseLeave = () => {
+  //   setIsHovered(false);
+  // };
 
-    const style = {
-      color:" #9890E3", fontSize:"16px", margin:"0px",
-        ...(isHovered && { color: '#FFF' }),
-      };
-    const styleArrow = {
-      marginLeft:"10px",
-      strokeColor:" #9890E3",
-        ...(isHovered && { strokeColor: '#FFF' }),
-    }
+    // const style = {
+    //   color:" #9890E3", fontSize:"16px", margin:"0px",
+    //     ...(isHovered && { color: '#FFF' }),
+    //   };
+    // const styleArrow = {
+    //   marginLeft:"10px",
+    //   strokeColor:" #9890E3",
+    //     ...(isHovered && { strokeColor: '#FFF' }),
+    // }
 
     const Message = styled.h1`
     font-family: var(--font-inter);
@@ -72,14 +72,13 @@ export function HomePage(){
     margin: auto;
     `
     return <DynamicLayout>
-                {/* <DynamicAbout/>
+                <DynamicAbout/>
                 <DynamicServicios/>
                 <DynamicObjetivo/>
-                <DynamicFaqs/> */}
-                <ContactoContainer>
-                  <Message> WEB EN REMODELACION</Message>
-                    {/* <DynamicCartel/> */}
-                    {/* <DynamicButtonToContact 
+                {/* <DynamicFaqs/> */}
+                {/* <ContactoContainer>
+                    <DynamicCartel/>
+                    <DynamicButtonToContact 
                       onClick={()=> {router.push("/contact")}} 
                       style={{alignSelf:"end"}} 
                       onMouseEnter={handleHover}
@@ -88,7 +87,7 @@ export function HomePage(){
                             <TextInter700 style={style}>Comenzar un proyecto juntos </TextInter700> 
                             <Arrow style={styleArrow} strokeColor={styleArrow.strokeColor}/>
                         </div>
-                    </DynamicButtonToContact> */}
-                </ContactoContainer>
+                    </DynamicButtonToContact>
+                </ContactoContainer> */}
     </DynamicLayout>
 }

@@ -1,23 +1,39 @@
 import { TextRoboto700Lila } from "@/ui/text";
 import styled from "styled-components";
 
-export const ServiciosConteiner = styled.div`
-height: 380px;
-background: linear-gradient(180deg, #ACE1C8 0%, #BCBCED 98.44%);
-position: relative;
-bottom: 140px;
-max-width:1190px;
-margin:0 auto;
-@media (min-width: 420px) {
-bottom:100px;
-}
-@media (min-width: 850px) {
-padding:50px;
-height:484px;
-}
+// const slideInFromBottom = keyframes`
+//   from {
+//     transform: translateY(100%);
+//     opacity: 0;
+//   }
+//   to {
+//     transform: translateY(0);
+//     opacity: 1;
+//   }
+// `;
 
-
-`
+// export const ServiciosConteiner = styled.div`
+// height: 380px;
+// background: linear-gradient(180deg, #ACE1C8 0%, #BCBCED 98.44%);
+// position: relative;
+// bottom: 140px;
+// /* max-width:1190px; */
+// margin:0 auto;
+// @media (min-width: 420px) {
+// bottom:100px;
+// }
+// @media (min-width: 850px) {
+// display:grid;
+// grid-template-columns: 1fr 1fr;
+// align-items: end;
+// padding:50px;
+// height:600px;
+// top: 70px;
+// background:#D9D9D9;
+// margin-bottom: 30px;
+// animation: ${slideInFromBottom} 1s ease-in-out forwards; /* Aplica la animación */
+// }
+// `
 export const DetalleCardConteiner = styled.div`
 display: flex;
 justify-content: space-around;
@@ -56,6 +72,9 @@ margin: 0 auto;
 margin-top:70px;
 bottom:0px;
 margin-bottom: 50px
+}
+@media (min-width: 850px) {
+    margin-top: 130px;
 }
 `
 export const DetallesTitle = styled(TextRoboto700Lila)`

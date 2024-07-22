@@ -34,7 +34,7 @@ export function Header(){
         router.push("/contact")
     };
     const handleClickScrollPortafolio = () => {
-        router.push("https://www.behance.net/antonellajaime")
+        window.open("https://www.behance.net/antonellajaime", "_blank");
     };
 
 
@@ -65,13 +65,13 @@ export function Header(){
         </BurgerWrap>
         <NavMenu style={isOpen?{display:"flex"}:{}}>
             <UlNav>
-                {/* <DynamicHover style={{cursor:"pointer"}} onClick={handleClickScrollAbout}>Home</DynamicHover>
+                <DynamicHover style={{cursor:"pointer"}} onClick={handleClickScrollAbout}>Home</DynamicHover>
                 <DynamicHover style={{cursor:"pointer"}} onClick={handleClickScrollServicios}>Servicios</DynamicHover>
-                <DynamicHover style={{cursor:"pointer"}} onClick={handleClickScrollFaqs}>FAQS</DynamicHover>
-                <DynamicHover style={{cursor:"pointer"}} onClick={handleClickScrollPortafolio}>Portafolio</DynamicHover> */}
-                {/* <ButtonToContactHeader  onClick={handleClickScrollContacto}>
-                    <DynamicHover style={{fontSize:"24px"}}>Contactar</DynamicHover> 
-                </ButtonToContactHeader> */}
+                {/* <DynamicHover style={{cursor:"pointer"}} onClick={handleClickScrollFaqs}>FAQS</DynamicHover> */}
+                <DynamicHover style={{cursor:"pointer"}} onClick={handleClickScrollPortafolio}>Portafolio</DynamicHover>
+                <ButtonToContactHeader  onClick={handleClickScrollContacto}>
+                   Contactar
+                </ButtonToContactHeader>
             </UlNav>
         </NavMenu>
 

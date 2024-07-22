@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled,  { keyframes } from "styled-components";
 
 export const HeaderConteiner = styled.div`
 width: 100%;
@@ -10,6 +10,10 @@ justify-content: space-between;
 padding: 0 40px;
 z-index: 5;
 position:sticky;
+@media (min-width: 850px) {
+    background: none;
+    padding: 0 80px;
+}
 `
 export const NavMenu = styled.div`
 width:70%;
@@ -29,12 +33,13 @@ background: #9692D7;
     height: 140px;
     background: none;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: flex-end;
     width: 80%;
+    position: inherit;
 }
 
 @media (min-width: 850px) {
-    width: 60%
+    width: 50%
 }
 
 `
@@ -50,7 +55,7 @@ margin-top: 60px;
 @media (min-width: 500px) {
     flex-direction: row;
     justify-content: space-around;
-    width: 90%;
+    width: 70%;
 }
 `
 
@@ -61,18 +66,55 @@ z-index:5;
 }
 `
 
+
+
+const fadeIn = keyframes`
+    from {
+        width: 0%;
+        left: 0;
+    }
+    to {
+        width: 100%;
+        left: 0;
+    }
+`;
+
 export const Hover = styled.div`
-font-family: var(--font-roboto);
-font-style: normal;
-font-weight: 500;
-font-size: 24px;
-line-height: 28px;
-text-align: justify;
-color: #FFFFFF;
-&:hover{
-    color:#9692D7
+    font-family: var(--font-poppins);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: justify;
+    color: #fff;
+    width: fit-content;
+    position: relative;
+    
+    @media (min-width: 850px) {
+        font-size: 24px;
+        color: #878282;
+        
+        &:hover {
+            color: #9692D7;
+        }
+
+        &:after {
+            content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 2px;
+        background-color: #9692D7;
+        transition: width 0.5s ease, left 0.5s ease; /* Transición progresiva durante medio segundo */
+    }
+    
+    &:hover::after {
+        animation: ${fadeIn} 0.5s forwards; /* Aplicar la animación fadeIn al hacer hover */
+    }
 }
-`
+`;
+
 
 export const MobileWrap = styled.div`
 @media (min-width: 500px) {
@@ -95,19 +137,43 @@ display: none;
 }
 `
 export const ButtonToContactHeader = styled.button`
+    font-family: var(--font-poppins);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: justify;
+    color: #fff;
     cursor: pointer;
     display: flex;
-    background: none;
+    background: #9692D7;
     border: none;
     justify-content: center;
     align-items: center;
     position: relative;
     top: -5px;
+    width: 100%;
+    
     @media (min-width: 500px) {
-    width: 20%;
+        width: 25%;
+        height: 35%;
+        top: -2;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 14px;
+        border: none;
+        padding: 0 10px;
+    }
+    
+    @media (min-width: 850px) {
+    top: -5px;
     height: 50%;
+    font-size: 24px;
+}
+&:hover {
+    color: #9692D7;
+    background: #fff;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 14px;
-    border: none;
+    border: 1px solid #9692D7;
 }
 `

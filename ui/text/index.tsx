@@ -1,7 +1,25 @@
 import styled from "styled-components";
 
-export const TextRoboto500 = styled.p`
+export const TextRoboto500 = styled.p<{colorCustom?:string, fontSizeCustom?:string}>`
 font-family: var(--font-roboto);
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 28px;
+text-align: justify;
+color: #FFFFFF;
+@media (min-width: 420px) {
+    //font-size:32px;
+}
+@media (min-width: 1000px) {
+    text-align:justify;
+    font-size:${(props) => props.fontSizeCustom || "36px"};
+    line-height: 42px;
+    color: ${(props) => props.colorCustom || "#FFFFFF"};
+}
+`
+export const TextPoppins500 = styled.p`
+font-family: var(--font-poppins);
 font-style: normal;
 font-weight: 500;
 font-size: 20px;
@@ -14,7 +32,7 @@ color: #FFFFFF;
 @media (min-width: 1000px) {
 text-align:justify;
 font-size:36px;
-line-height: 42px;
+/* line-height: 42px; */
 }
 `
 export const TextRoboto500Gris = styled(TextRoboto500)`
@@ -28,6 +46,26 @@ padding: 20px;
 font-size: 24px;
 }
 `
+
+// tecto de seccion about
+export const TextPoppins500Gris = styled.p`
+color: #949090;
+font-family: var(--font-poppins);
+font-size: 24px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+`
+// span gris de seccion about
+export const TextPoppins500GrisSpan = styled.span`
+color: #949090;
+font-family: var(--font-poppins);
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+`
+
 export const TitleWithShadow = styled.h2`
 font-family: var(--font-roboto);
 font-style: normal;
@@ -37,8 +75,25 @@ line-height: 38px;
 color: #FFFFFF;
 text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 @media (min-width: 850px) {
-    font-size:50px;
-    margin: 20px 0;
+    color: #BCBCEE;
+    font-family:var(--font-poppins);
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-shadow: none;
+}
+`
+
+export const TitleSpanNew = styled.span`
+@media (min-width: 850px) {
+    font-family: var(--font-poppins);
+    color: #FFF;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    background: #BCBCEE;
+    padding: 0 10px;
 }
 `
 export const TextRoboto700 = styled.h3`
@@ -104,15 +159,28 @@ padding:10px;
 }
 `
 
-export const TextInter700 = styled.h2`
+export const TextInter700 = styled.h2<{ displayCustom?: string }> `
 font-family: var(--font-inter);
 font-style: normal;
 font-weight: 700;
 font-size: 36px;
 line-height: 44px;
 color: #FFFFFF;
-
+@media (min-width: 500px) {
+    display: ${(props) => props.displayCustom || "initial"};
+}
 `
+
+export const TextPoppins600 = styled.p<{ fontStyleCustom?: string, weightCustom?: string }> `
+font-family: var(--font-poppins);
+font-style: ${(props) => props.fontStyleCustom || "normal"};
+font-weight: ${(props) => props.weightCustom || "600"};
+font-size: 60px;
+line-height: 24px;
+color: #878282;
+width: fit-content
+`
+
 
 export const TextInter600Lila = styled.p`
 /* font-family: 'Inter'; */
